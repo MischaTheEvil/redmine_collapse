@@ -1,0 +1,22 @@
+<p><label><%= l(:setting_collapse_ptab) %></label>
+<%= select_tag 'settings[show_projects_tab]',
+      options_for_select( [[l(:general_text_No), "0"],
+                           [l(:general_text_Yes), "1"]
+                          ], @settings ['show_projects_tab'] )
+%>
+</p>
+<p><label><%= l(:setting_hide_pselector) %></label>
+<%= select_tag 'settings[hide_project_selector]',
+      options_for_select( [[l(:general_text_No), "0"],
+                           [l(:general_text_Yes), "1"]
+                          ], @settings ['hide_project_selector'] )
+%>
+</p>
+<p><label><%= l(:setting_collapse_position) %></label>
+<%= select_tag 'settings[position]',
+      options_for_select( [[l(:label_collapse_left), "0"],
+                           [l(:label_collapse_right), "1"]
+                          ], @settings ['position'] )
+%>
+(Not yet implemented)
+</p>

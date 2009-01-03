@@ -1,0 +1,23 @@
+<h3><%= l(:label_project_plural) %></h3>
+<% user_projects_by_root = User.current.projects.find(:all, :include => :parent).group_by(&:root) %>
+<div id="projects">
+    <ul>
+        <% user_projects_by_root.keys.sort.each do |root| %>
+            <% if !@project.nil? %>
+                <li><%= link_to_if !(root.identifier == @project.identifier), h(root.name), :controller => 'projects', :action => 'show', :id => root %></li>
+            <% else %>
+                <li><%= link_to h(root.name), :controller => 'projects', :action => 'show', :id => root %></li>
+            <% end %>
+            <ul>
+                <% user_projects_by_root[root].sort.each do |project| %>
+                    <% next if project == root %>
+                        <% if !@project.nil? %>
+                            <li><%= link_to_if !(project.identifier == @project.identifier), h(project.name), :controller => 'projects', :action => 'show', :id => project %></li>
+                        <% else %>
+                            <li><%= link_to h(project.name), :controller => 'projects', :action => 'show', :id => project %></li>
+                        <% end %>
+                <% end %>
+            </ul>
+        <% end %>
+    </ul>
+</div>

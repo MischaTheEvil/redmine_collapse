@@ -1,0 +1,108 @@
+/*****
+* Redmine Core CSS-Overloads for Collapse
+*****/
+
+/***** Overloading Redmine Core layout-selectors *****/
+#main {
+    background-color: #FFFFFF;
+    padding: 2px 0px 0px 14px;
+}
+
+html>body #content { height: auto; min-height: 600px; overflow: auto; }
+
+
+/*****
+* CSS for Collapse (Left)
+*****/
+
+/***** The box wherein the sidebar resides *****/
+#main #leftmenu {
+    float: left;
+    min-height: 600px;
+    padding: 0;
+    position: relative;
+    margin-right: 15px;
+}
+
+/***** The seperator between the box wherein the sidebar resides and the content *****/
+#main #leftmenu #leftmenu-border {
+    position: absolute;
+    right: -5px;
+    top: 35px;
+    height: 95%;
+    width: 5px;
+    background-image: url(../images/border_collapse.gif);
+    background-repeat: no-repeat;
+    background-position: 0 90px;
+    background-color: #CCCCCC;
+    cursor:pointer;
+}
+
+/***** The actual sidebar wherein tabs reside *****/
+#main #leftmenu #leftmenu-contents {
+    position: relative;
+    width: 200px;
+    text-align: left;
+}
+
+
+/*****
+* CSS for Left Collapse Tabs
+*****/
+
+/***** The global tab layout *****/
+#leftmenu .tabs { height: 2.95em; border-bottom: 1px solid #BBBBBB; margin-bottom: 1.2em; position: relative; }
+
+#leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 8px; }
+#leftmenu .tabs>ul { bottom: -1px; } /* others */
+#leftmenu .tabs ul li {
+    float: left;
+    list-style-type: none;
+    white-space: nowrap;
+    margin-right: 8px;
+    background: #FFF;
+}
+#leftmenu .tabs ul li a{
+    display: block;
+    font-size: 0.9em;
+    text-decoration: none;
+    line-height: 1.3em;
+    padding: 4px 6px 4px 6px;
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #BBBBBB;
+    background-color: #EEEEEE;
+    color: #777;
+    font-weight: bold;
+}
+#leftmenu .tabs ul li a:hover {
+    background-color: #FFFFDD;
+    text-decoration: none;
+}
+#leftmenu .tabs ul li a.selected {
+    background-color: #FFF;
+    border: 1px solid #BBBBBB;
+    border-bottom: 1px solid #FFF;
+}
+#leftmenu .tabs ul li a.selected:hover {
+    background-color: #FFF;
+}
+
+/***** The projects tab *****/
+#main #leftmenu #tab-content-projects ul {
+    margin-left: -25px;
+}
+#main #leftmenu #tab-content-projects ul ul {
+    margin-bottom: 3px;
+}
+#main #leftmenu #tab-content-projects a {
+    text-decoration: none;
+    display: block;
+ }
+#main #leftmenu #tab-content-projects a.current {
+    font-weight: bold;
+}
+
+/***** The actions tab *****/
+#main #leftmenu #tab-content-actions {
+    text-align: left;
+}

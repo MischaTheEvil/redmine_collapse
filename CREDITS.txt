@@ -1,0 +1,10 @@
+Thanks go to the following people for patches and contributions:
+
+Mischa The Evil <mischa_the_evil[AT]hotmail[DOT]com>
+- Project Maintainer
+
+Sebastian Kurfürst, Typo3 Development Team
+- Groundlayer of the Redmine-implementation used as a base for this plugin
+
+Lalit Patel, http://www.lalit.org
+- Javascript code to store data as JSON strings in cookies
