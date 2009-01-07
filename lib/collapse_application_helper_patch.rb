@@ -25,6 +25,15 @@ module CollapseApplicationHelperPatch
       return tabs
     end
     
+    # Returns true if the required method is defined, else it returns false
+    def jump_to_current_view_implemented
+      if Redmine::MenuManager::MenuController.method_defined? "redirect_to_project_menu_item"
+        return true
+      else
+        return false
+      end
+    end
+  
   end
 
 end
