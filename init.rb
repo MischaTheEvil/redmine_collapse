@@ -1,7 +1,7 @@
 require 'redmine'
 
 # Patches to the Redmine core.
-require 'collapse_helper_inclusion.rb'
+require 'collapse_application_helper_patch'
 
 RAILS_DEFAULT_LOGGER.info 'Starting Collapse plugin for Redmine'
 
