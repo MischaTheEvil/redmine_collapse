@@ -38,10 +38,10 @@ module CollapseApplicationHelperPatch
     end
     
     ###
-    # Tab renderers
+    # Tab helpers
     ###
     
-    # Left-menu tab renderer
+    # Left-menu tabs renderer
     # Returns the tabs-variable containing an array of the left-menu tabs to render
     def left_menu_tabs
       # Don't render the projects-tab unless specifically configured
@@ -52,6 +52,27 @@ module CollapseApplicationHelperPatch
         tabs = [ { :name => 'actions', :label => l(:label_actions_tab), :partial => 'left_menu/actions.rhtml' } ]
       end
       return tabs
+    end
+    
+    # Left-menu selected-tab based on active controller and activated-tabs settings
+    # Returns a string containing the name of the selected tab
+    def left_menu_selected_tab
+      if (Setting.plugin_redmine_collapse['show_projects_tab'] == '1' ) && ( params[:controller] == 'welcome' ||
+                                                                             params[:controller] == 'account' ||
+                                                                             params[:controller] == 'admin' ||
+                                                                             params[:controller] == 'users' ||
+                                                                             params[:controller] == 'roles' ||
+                                                                             params[:controller] == 'trackers' ||
+                                                                             params[:controller] == 'issue_statuses' ||
+                                                                             params[:controller] == 'workflows' ||
+                                                                             params[:controller] == 'custom_fields' ||
+                                                                             params[:controller] == 'enumerations' ||
+                                                                             params[:controller] == 'settings')
+        selectedtab = 'projects'
+      else
+        selectedtab = 'actions'
+      end
+      return selectedtab
     end
     
   end

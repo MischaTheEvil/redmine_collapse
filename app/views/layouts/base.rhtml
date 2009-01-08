@@ -52,23 +52,7 @@
                 <div style="width:200px">
                     <% tabs = left_menu_tabs %>
                     <% selected_tab = params[:tab] ? params[:tab].to_s : tabs.first[:name] %>
-                    
-                    <% if ( Setting.plugin_redmine_collapse['show_projects_tab'] == '1' ) && ( params[:controller] == 'welcome' ||
-                            params[:controller] == 'account' ||
-                            params[:controller] == 'admin' ||
-                            params[:controller] == 'users' ||
-                            params[:controller] == 'roles' ||
-                            params[:controller] == 'trackers' ||
-                            params[:controller] == 'issue_statuses' ||
-                            params[:controller] == 'workflows' ||
-                            params[:controller] == 'custom_fields' ||
-                            params[:controller] == 'enumerations' ||
-                            params[:controller] == 'settings' ) then
-                         selected_tab = 'projects'
-                       else
-                         selected_tab = 'actions'
-                       end
-                    %>
+                    <% selected_tab = left_menu_selected_tab %>
                     
                     <div class="tabs">
                         <ul>
