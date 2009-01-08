@@ -33,6 +33,15 @@ module CollapseApplicationHelperPatch
         return false
       end
     end
+    
+    # Returns true if the method is defined, else it returns false
+    def render_flash_messages_implemented 
+      if ApplicationHelper.method_defined? "render_flash_messages" 
+        return true
+      else
+        return false
+      end
+    end
   
   end
 
