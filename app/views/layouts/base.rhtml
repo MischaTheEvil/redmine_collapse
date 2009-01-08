@@ -94,8 +94,12 @@
         </div>
         
         <div id="content">
-            <%= content_tag('div', flash[:error], :class => 'flash error') if flash[:error] %>
-            <%= content_tag('div', flash[:notice], :class => 'flash notice') if flash[:notice] %>
+            <% if render_flash_messages_implemented == true %>
+                <%= render_flash_messages %>
+            <% else %>
+                <%= content_tag('div', flash[:error], :class => 'flash error') if flash[:error] %>
+                <%= content_tag('div', flash[:notice], :class => 'flash notice') if flash[:notice] %>
+            <% end %>
             <%= yield %>
         </div>
     </div>
