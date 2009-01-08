@@ -35,6 +35,17 @@ This plugin can be configured under Administration -> Plugins -> Redmine Collaps
 2. Unzip the file to your Redmine into the vendor/plugins directory
 3. Restart your Redmine
 
+## Credits
+
+Thanks goes out to the following people:
+
+* Eric Davis, Little Stream Software (http://www.littlestreamsoftware.com)
+** Provided skeleton for Redmine core patches (see lib/collapse_application_helper_patch.rb)
+* Sebastian Kurfürst, Typo3 Development Team (http://www.typo3.org)
+** Author of the Redmine core hacks, to implement this feature for Typo3-Forge, used as a base for this plugin
+* Lalit Patel, (http://www.lalit.org)
+** Provided Javascript code to store data as JSON-strings in cookies (initially used by Sebastian)
+
 ## License
 
 This plugin is licensed under the GNU GPL v2. See LICENSE.txt and GPL.txt for details.
