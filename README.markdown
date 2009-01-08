@@ -1,11 +1,11 @@
 # Redmine Collapse plugin
 
-A plugin to transform the default Redmine sidebar into a collapseable sidebar on the left side.
+A plugin to transform the default Redmine sidebar into a collapsible sidebar on the left side.
 
 ## Features
 
 * Replaces the Redmine core's sidebar
-  * The provided sidebar is collapseable using JavaScript-helpers
+  * The provided sidebar is collapsible using JavaScript-helpers
   * The default sidebar-content is available on the default Actions-tab
   * An optional Projects-tab provides (nested) project-links of projects for which the current user has a role
     * on Redmine 0.8.0 project-links are pointing to project overviews

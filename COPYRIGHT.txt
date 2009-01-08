@@ -1,4 +1,4 @@
-Redmine Collapse is a Redmine plugin to transform the static sidebar into a collapseable one.
+Redmine Collapse is a Redmine plugin to transform the static sidebar into a collapsible one.
 Copyright (C) 2009,  Mischa The Evil, [[Evil-Dev]] (http://www.evil-dev.net)
 
 Certain parts of this plugin are:

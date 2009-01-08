@@ -8,7 +8,7 @@ RAILS_DEFAULT_LOGGER.info 'Starting Collapse plugin for Redmine'
 Redmine::Plugin.register :redmine_collapse do
   name 'Redmine Collapse plugin'
   author 'Mischa The Evil'
-  description 'This is a plugin for Redmine which transforms the static sidebar into a collapseable sidebar'
+  description 'This is a plugin for Redmine which transforms the static sidebar into a collapsible sidebar'
   version '0.0.0'
 
   settings :default => {

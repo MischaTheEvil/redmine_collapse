@@ -1,4 +1,4 @@
-/* Scripts for the collapseable sidebar */
+/* Scripts for the collapsible sidebar */
 
 /* Show left tab */
 function showLeftTab(name) {
