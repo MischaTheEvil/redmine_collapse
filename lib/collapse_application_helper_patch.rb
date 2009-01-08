@@ -5,7 +5,6 @@ module CollapseApplicationHelperPatch
     base.extend(ClassMethods)
 
     base.send(:include, InstanceMethods)
-
   end
   
   module ClassMethods
@@ -76,7 +75,6 @@ module CollapseApplicationHelperPatch
     end
     
   end
-
 end
 
 ApplicationHelper.send(:include, CollapseApplicationHelperPatch)
