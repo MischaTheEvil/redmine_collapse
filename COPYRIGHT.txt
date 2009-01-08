@@ -1,5 +1,5 @@
 Redmine Collapse is a Redmine plugin to transform the static sidebar into a collapseable one.
-Copyright (C) 2008,  Mischa The Evil, [[Evil Dev]]
+Copyright (C) 2009,  Mischa The Evil, [[Evil-Dev]] (http://www.evil-dev.net)
 
 Certain parts of this plugin are:
 * Copyright (C) 2008,  Sebastian Kurfürst, Typo3 Development Team (http://www.typo3.org)

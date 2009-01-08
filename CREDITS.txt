@@ -1,10 +1,10 @@
 Thanks go to the following people for patches and contributions:
 
-Mischa The Evil <mischa_the_evil[AT]hotmail[DOT]com>
-- Project Maintainer
+Eric Davis, Little Stream Software (http://www.littlestreamsoftware.com)
+- Provided skeleton for Redmine core patch (see lib/collapse_application_helper_patch.rb)
 
-Sebastian Kurfürst, Typo3 Development Team
+Sebastian Kurfürst, Typo3 Development Team (http://www.typo3.org)
 - Groundlayer of the Redmine-implementation used as a base for this plugin
 
-Lalit Patel, http://www.lalit.org
+Lalit Patel, (http://www.lalit.org)
 - Javascript code to store data as JSON strings in cookies
