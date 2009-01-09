@@ -35,6 +35,13 @@ This plugin can be configured under Administration -> Plugins -> Redmine Collaps
 2. Unzip the file to your Redmine into the vendor/plugins directory
 3. Restart your Redmine
 
+## Uninstall
+
+1. Remove the directory "redmine_collapse" from the plugin-directory "../vendor/plugins".
+2. Restart Redmine.
+
+Make sure that no plugin-assets remain available in "../public/plugin_assets/redmine_collapse".
+
 ## Credits
 
 Thanks goes out to the following people:
