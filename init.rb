@@ -10,7 +10,9 @@ Redmine::Plugin.register :redmine_collapse do
   author 'Mischa The Evil'
   description 'This is a plugin for Redmine which transforms the static sidebar into a collapsible sidebar'
   version '0.0.0'
-
+  
+  requires_redmine :version_or_higher => '0.8.0'
+  
   settings :default => {
     'position' => '0',
     'show_projects_tab' => '1',
