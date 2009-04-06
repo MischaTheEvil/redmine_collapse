@@ -17,7 +17,7 @@
                     <% next if project == root %>
                         <% if !@project.nil? %>
                             <% if jump_to_current_view_implemented == true %>
-                                <li><%= link_to_if !(project.identifier == @project.identifier), h(project.name), :controller => 'projects', :action => 'show', :jump => current_menu_item %></li>
+                                <li><%= link_to_if !(project.identifier == @project.identifier), h(project.name), :controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item %></li>
                             <% else %>
                                 <li><%= link_to_if !(project.identifier == @project.identifier), h(project.name), :controller => 'projects', :action => 'show', :id => project %></li>
                             <% end %>
