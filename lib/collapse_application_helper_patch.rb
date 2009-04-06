@@ -83,6 +83,8 @@ module CollapseApplicationHelperPatch
         currenttheme = 'alternate'
       elsif (Setting.ui_theme == 'classic')
         currenttheme = 'classic'
+      elsif (Setting.ui_theme == 'basecamp')
+        currenttheme = 'basecamp'
       elsif (Setting.ui_theme == 'squeejee')
         currenttheme = 'squeejee'
       else
