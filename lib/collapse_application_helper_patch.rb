@@ -45,10 +45,10 @@ module CollapseApplicationHelperPatch
     def left_menu_tabs
       # Don't render the projects-tab unless specifically configured
       if Setting.plugin_redmine_collapse['show_projects_tab'] == '1'
-        tabs = [ { :name => 'actions', :label => l(:label_actions_tab), :partial => 'left_menu/actions.rhtml' },
-                 { :name => 'projects', :label => l(:label_projects_tab), :partial => 'left_menu/projects.rhtml' } ]
+        tabs = [ { :name => 'actions-tab', :label => l(:label_actions_tab), :partial => 'left_menu/actions.rhtml' },
+                 { :name => 'projects-tab', :label => l(:label_projects_tab), :partial => 'left_menu/projects.rhtml' } ]
       else
-        tabs = [ { :name => 'actions', :label => l(:label_actions_tab), :partial => 'left_menu/actions.rhtml' } ]
+        tabs = [ { :name => 'actions-tab', :label => l(:label_actions_tab), :partial => 'left_menu/actions.rhtml' } ]
       end
       return tabs
     end
@@ -67,9 +67,9 @@ module CollapseApplicationHelperPatch
                                                                              params[:controller] == 'custom_fields' ||
                                                                              params[:controller] == 'enumerations' ||
                                                                              params[:controller] == 'settings')
-        selectedtab = 'projects'
+        selectedtab = 'projects-tab'
       else
-        selectedtab = 'actions'
+        selectedtab = 'actions-tab'
       end
       return selectedtab
     end

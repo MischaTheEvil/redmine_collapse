@@ -89,22 +89,22 @@ html>body #content { height: auto; min-height: 600px; overflow: auto; }
 }
 
 /***** The projects tab *****/
-#main #leftmenu-default #leftmenu #tab-content-projects ul {
+#main #leftmenu-default #leftmenu #tab-content-projects-tab ul {
     margin-left: -25px;
 }
-#main #leftmenu-default #leftmenu #tab-content-projects ul ul {
+#main #leftmenu-default #leftmenu #tab-content-projects-tab ul ul {
     margin-bottom: 3px;
 }
-#main #leftmenu-default #leftmenu #tab-content-projects a {
+#main #leftmenu-default #leftmenu #tab-content-projects-tab a {
     text-decoration: none;
     display: block;
- }
-#main #leftmenu-default #leftmenu #tab-content-projects a.current {
+}
+#main #leftmenu-default #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
 }
 
 /***** The actions tab *****/
-#main #leftmenu-default #leftmenu #tab-content-actions {
+#main #leftmenu-default #leftmenu #tab-content-actions-tab {
     text-align: left;
 }
 
@@ -187,22 +187,22 @@ html>body #content { height: auto; min-height: 600px; overflow: auto; }
 }
 
 /***** The projects tab *****/
-#main #leftmenu-alternate #leftmenu #tab-content-projects ul {
+#main #leftmenu-alternate #leftmenu #tab-content-projects-tab ul {
     margin-left: -25px;
 }
-#main #leftmenu-alternate #leftmenu #tab-content-projects ul ul {
+#main #leftmenu-alternate #leftmenu #tab-content-projects-tab ul ul {
     margin-bottom: 3px;
 }
-#main #leftmenu-alternate #leftmenu #tab-content-projects a {
+#main #leftmenu-alternate #leftmenu #tab-content-projects-tab a {
     text-decoration: none;
     display: block;
- }
-#main #leftmenu-alternate #leftmenu #tab-content-projects a.current {
+}
+#main #leftmenu-alternate #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
 }
 
 /***** The actions tab *****/
-#main #leftmenu-alternate #leftmenu #tab-content-actions {
+#main #leftmenu-alternate #leftmenu #tab-content-actions-tab {
     text-align: left;
 }
 
@@ -285,22 +285,22 @@ html>body #content { height: auto; min-height: 600px; overflow: auto; }
 }
 
 /***** The projects tab *****/
-#main #leftmenu-classic #leftmenu #tab-content-projects ul {
+#main #leftmenu-classic #leftmenu #tab-content-projects-tab ul {
     margin-left: -25px;
 }
-#main #leftmenu-classic #leftmenu #tab-content-projects ul ul {
+#main #leftmenu-classic #leftmenu #tab-content-projects-tab ul ul {
     margin-bottom: 3px;
 }
-#main #leftmenu-classic #leftmenu #tab-content-projects a {
+#main #leftmenu-classic #leftmenu #tab-content-projects-tab a {
     text-decoration: none;
     display: block;
- }
-#main #leftmenu-classic #leftmenu #tab-content-projects a.current {
+}
+#main #leftmenu-classic #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
 }
 
 /***** The actions tab *****/
-#main #leftmenu-classic #leftmenu #tab-content-actions {
+#main #leftmenu-classic #leftmenu #tab-content-actions-tab {
     text-align: left;
 }
 
@@ -383,22 +383,22 @@ html>body #content { height: auto; min-height: 600px; overflow: auto; }
 }
 
 /***** The projects tab *****/
-#main #leftmenu-basecamp #leftmenu #tab-content-projects ul {
+#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab ul {
     margin-left: -25px;
 }
-#main #leftmenu-basecamp #leftmenu #tab-content-projects ul ul {
+#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab ul ul {
     margin-bottom: 3px;
 }
-#main #leftmenu-basecamp #leftmenu #tab-content-projects a {
+#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab a {
     text-decoration: none;
     display: block;
- }
-#main #leftmenu-basecamp #leftmenu #tab-content-projects a.current {
+}
+#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
 }
 
 /***** The actions tab *****/
-#main #leftmenu-basecamp #leftmenu #tab-content-actions {
+#main #leftmenu-basecamp #leftmenu #tab-content-actions-tab {
     text-align: left;
 }
 
@@ -497,21 +497,21 @@ html>body #content { height: auto; min-height: 600px; overflow: auto; }
 }
 
 /***** The projects tab *****/
-#main #leftmenu-squeejee #leftmenu #tab-content-projects ul {
+#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab ul {
     margin-left: -25px;
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-projects ul ul {
+#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab ul ul {
     margin-bottom: 3px;
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-projects a {
+#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab a {
     text-decoration: none;
     display: block;
- }
-#main #leftmenu-squeejee #leftmenu #tab-content-projects a.current {
+}
+#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
 }
 
 /***** The actions tab *****/
-#main #leftmenu-squeejee #leftmenu #tab-content-actions {
+#main #leftmenu-squeejee #leftmenu #tab-content-actions-tab {
     text-align: left;
 }
