@@ -36,10 +36,62 @@ module CollapseApplicationHelperPatch
       end
     end
     
+    # Redmine Core trunk@r2304
+    # Returns true if the method is defined, else it returns false
+    def render_project_hierarchy_implemented 
+      if ProjectsHelper.method_defined? "render_project_hierarchy" 
+        return true
+      else
+        return false
+      end
+    end
+    
+    # Redmine Core trunk@r2485
+    # Returns true if the method is defined, else it returns false
+    def page_header_title_implemented
+      if ApplicationHelper.method_defined? "page_header_title" 
+        return true
+      else
+        return false
+      end
+    end
+    
     ###
     # Tab helpers
     ###
     
+    # Renders a tree of projects as a nested set of unordered lists
+    # The given collection may be a subset of the whole project tree
+    # (eg. some intermediate nodes are private and can not be seen)
+    def render_involved_projects_list(projects)
+      s = ''
+      if projects.any?
+        ancestors = []
+        projects.each do |project|
+          if (ancestors.empty? || project.is_descendant_of?(ancestors.last))
+            s << "<ul class='projects #{ ancestors.empty? ? 'root' : nil}'>\n"
+          else
+            ancestors.pop
+            s << "</li>"
+            while (ancestors.any? && !project.is_descendant_of?(ancestors.last)) 
+              ancestors.pop
+              s << "</ul></li>\n"
+            end
+          end
+          classes = (ancestors.empty? ? 'root' : 'child')
+          s << "<li>" +
+                       if !@project.nil?
+                link_to_if (project.identifier != @project.identifier), h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}
+                       else
+                link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
+			           end
+                ancestors << project
+        end
+        s << ("</li></ul>\n" * ancestors.size)
+      end
+      s
+    end
+
     # Left-menu tabs renderer
     # Returns the tabs-variable containing an array of the left-menu tabs to render
     def left_menu_tabs
