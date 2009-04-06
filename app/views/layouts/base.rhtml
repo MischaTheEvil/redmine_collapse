@@ -47,6 +47,7 @@
     </div>
     
     <%= tag('div', {:id => 'main', :class => 'nosidebar'}, true) %>
+      <div id="leftmenu-<%= current_redmine_theme %>">
         <div id="leftmenu">
             <div id="leftmenu-contents">
                 <div style="width:200px">
@@ -76,6 +77,7 @@
             
             <div id="leftmenu-border" onclick="toggle_leftMenu('leftmenu-contents')"></div>
         </div>
+      </div>
         
         <div id="content">
             <% if render_flash_messages_implemented == true %>
