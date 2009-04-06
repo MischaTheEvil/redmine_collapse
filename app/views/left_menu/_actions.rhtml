@@ -1,3 +1,4 @@
-<div id="actions">                                                                                                                                                                        
-    <%= yield :sidebar %>                                                                                                                                                                 
-</div> 
+<div id="actions">
+    <%= yield :sidebar %>
+    <%= call_hook :view_layouts_base_sidebar %>
+</div>
