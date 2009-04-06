@@ -74,6 +74,23 @@ module CollapseApplicationHelperPatch
       return selectedtab
     end
     
+    # Currently used Redmine Theme based on the global setting
+    # Returns a string containing the name of the current theme
+    def current_redmine_theme
+      if (Setting.ui_theme == '')
+        currenttheme = 'default'
+      elsif (Setting.ui_theme == 'alternate')
+        currenttheme = 'alternate'
+      elsif (Setting.ui_theme == 'classic')
+        currenttheme = 'classic'
+      elsif (Setting.ui_theme == 'squeejee')
+        currenttheme = 'squeejee'
+      else
+        currenttheme = 'default'
+      end
+      return currenttheme
+    end
+    
   end
 end
 
