@@ -1,14 +1,19 @@
+/******************** GENERIC ********************/
+
 /*****
 * Redmine Core CSS-Overloads for Collapse
 *****/
 
 /***** Overloading Redmine Core layout-selectors *****/
 #main {
-    background-color: inherit;
+    background-color: inherit; /* not in IE7 */
     padding: 2px 0px 0px 14px;
 }
-
-html>body #content { height: auto; min-height: 600px; overflow: auto; }
+html>body #content {
+    height: auto;
+    min-height: 600px;
+    overflow: auto;
+}
 
 /******************** DEFAULT THEME ********************/
 
