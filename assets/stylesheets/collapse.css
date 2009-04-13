@@ -89,7 +89,7 @@ html>body #content { height: auto; min-height: 600px; overflow: auto; }
 }
 
 /***** The projects tab *****/
-#main #leftmenu-default #leftmenu #tab-content-projects-tab div#projects {
+#main #leftmenu-default #leftmenu #tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
 }
 #main #leftmenu-default #leftmenu #tab-content-projects-tab ul ul {
@@ -187,7 +187,7 @@ html>body #content { height: auto; min-height: 600px; overflow: auto; }
 }
 
 /***** The projects tab *****/
-#main #leftmenu-alternate #leftmenu #tab-content-projects-tab div#projects {
+#main #leftmenu-alternate #leftmenu #tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
 }
 #main #leftmenu-alternate #leftmenu #tab-content-projects-tab ul ul {
@@ -285,7 +285,7 @@ html>body #content { height: auto; min-height: 600px; overflow: auto; }
 }
 
 /***** The projects tab *****/
-#main #leftmenu-classic #leftmenu #tab-content-projects-tab div#projects {
+#main #leftmenu-classic #leftmenu #tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
 }
 #main #leftmenu-classic #leftmenu #tab-content-projects-tab ul ul {
@@ -383,7 +383,7 @@ html>body #content { height: auto; min-height: 600px; overflow: auto; }
 }
 
 /***** The projects tab *****/
-#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab div#projects {
+#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
 }
 #main #leftmenu-basecamp #leftmenu #tab-content-projects-tab ul ul {
@@ -497,7 +497,7 @@ html>body #content { height: auto; min-height: 600px; overflow: auto; }
 }
 
 /***** The projects tab *****/
-#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab div#projects {
+#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab ul ul {
