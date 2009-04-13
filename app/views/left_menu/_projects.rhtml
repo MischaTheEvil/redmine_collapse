@@ -6,10 +6,12 @@
     <% user_projects_by_root = User.current.projects.find(:all, :include => :parent).group_by(&:root) %>
 <% end %>
 
-<div id="projects">
-    <% if render_project_hierarchy_implemented == true %>
+<% if render_project_hierarchy_implemented == true %>
+    <div id="projects-nested">
         <%= render_involved_projects_list(user_projects) %>
-    <% else %>
+    </div>
+<% else %>
+    <div id="projects-tree">
         <ul>
             <% user_projects_by_root.keys.sort.each do |root| %>
                 <% if !@project.nil? %>
@@ -37,5 +39,5 @@
                 </ul>
             <% end %>
         </ul>
-    <% end %>
-</div>
+    </div>
+<% end %>
