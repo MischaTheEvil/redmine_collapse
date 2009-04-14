@@ -93,6 +93,11 @@ html>body #content {
     background-color: #FFF;
 }
 
+/***** The actions tab *****/
+#main #leftmenu-default #leftmenu #tab-content-actions-tab {
+    text-align: left;
+}
+
 /***** The projects tab *****/
 #main #leftmenu-default #leftmenu #tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
@@ -106,11 +111,6 @@ html>body #content {
 }
 #main #leftmenu-default #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
-}
-
-/***** The actions tab *****/
-#main #leftmenu-default #leftmenu #tab-content-actions-tab {
-    text-align: left;
 }
 
 /******************** ALTERNATE THEME ********************/
@@ -191,6 +191,11 @@ html>body #content {
     background-color: #EEE;
 }
 
+/***** The actions tab *****/
+#main #leftmenu-alternate #leftmenu #tab-content-actions-tab {
+    text-align: left;
+}
+
 /***** The projects tab *****/
 #main #leftmenu-alternate #leftmenu #tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
@@ -204,11 +209,6 @@ html>body #content {
 }
 #main #leftmenu-alternate #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
-}
-
-/***** The actions tab *****/
-#main #leftmenu-alternate #leftmenu #tab-content-actions-tab {
-    text-align: left;
 }
 
 /******************** CLASSIC THEME ********************/
@@ -289,6 +289,11 @@ html>body #content {
     background-color: #FFF;
 }
 
+/***** The actions tab *****/
+#main #leftmenu-classic #leftmenu #tab-content-actions-tab {
+    text-align: left;
+}
+
 /***** The projects tab *****/
 #main #leftmenu-classic #leftmenu #tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
@@ -302,11 +307,6 @@ html>body #content {
 }
 #main #leftmenu-classic #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
-}
-
-/***** The actions tab *****/
-#main #leftmenu-classic #leftmenu #tab-content-actions-tab {
-    text-align: left;
 }
 
 /******************** BASECAMP THEME ********************/
@@ -387,6 +387,11 @@ html>body #content {
     background-color: #EEE;
 }
 
+/***** The actions tab *****/
+#main #leftmenu-basecamp #leftmenu #tab-content-actions-tab {
+    text-align: left;
+}
+
 /***** The projects tab *****/
 #main #leftmenu-basecamp #leftmenu #tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
@@ -400,11 +405,6 @@ html>body #content {
 }
 #main #leftmenu-basecamp #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
-}
-
-/***** The actions tab *****/
-#main #leftmenu-basecamp #leftmenu #tab-content-actions-tab {
-    text-align: left;
 }
 
 /******************** SQUEEJEE THEME ********************/
@@ -501,6 +501,11 @@ html>body #content {
     text-shadow: 1px 1px 1px rgba(0,0,0,.6);
 }
 
+/***** The actions tab *****/
+#main #leftmenu-squeejee #leftmenu #tab-content-actions-tab {
+    text-align: left;
+}
+
 /***** The projects tab *****/
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
@@ -514,9 +519,4 @@ html>body #content {
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
-}
-
-/***** The actions tab *****/
-#main #leftmenu-squeejee #leftmenu #tab-content-actions-tab {
-    text-align: left;
 }
