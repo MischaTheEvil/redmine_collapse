@@ -49,9 +49,11 @@
             <h1><%= h(@project && !@project.new_record? ? @project.name : Setting.app_title) %></h1>
         <% end %>
         
-        <div id="main-menu">
-            <%= render_main_menu(@project) %>
-        </div>
+        <% unless Setting.plugin_redmine_collapse['show_menus_tab'] == '1' && Setting.plugin_redmine_collapse['show_projectmenu_in_menustab'] == '1' %>
+            <div id="main-menu">
+                <%= render_main_menu(@project) %>
+            </div>
+        <% end %>
     </div>
     
     <%= tag('div', {:id => 'main', :class => 'nosidebar'}, true) %>
