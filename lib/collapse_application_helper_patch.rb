@@ -93,10 +93,32 @@ module CollapseApplicationHelperPatch
     end
 
     # Left-menu tabs renderer
-    # Returns the tabs-variable containing an array of the left-menu tabs to render
+    # Returns an array named 'tabs' containing the left-menu tabs to render
     def left_menu_tabs
+      # Don't render the menus-tab nor the projects-tab unless specifically configured
+      if Setting.plugin_redmine_collapse['show_menus_tab'] == '1' && Setting.plugin_redmine_collapse['show_projects_tab'] == '1'
+        # => Redmine trunk@r2493?
+        if Redmine.const_defined?(:I18n)
+          tabs = [ { :name => 'actions-tab', :label => :label_actions_tab, :partial => 'left_menu/actions.rhtml' },
+                   { :name => 'menus-tab', :label => :label_menus_tab, :partial => 'left_menu/menus.rhtml' },
+                   { :name => 'projects-tab', :label => :label_projects_tab, :partial => 'left_menu/projects.rhtml' } ]
+        else
+          tabs = [ { :name => 'actions-tab', :label => l(:label_actions_tab), :partial => 'left_menu/actions.rhtml' },
+                   { :name => 'menus-tab', :label => l(:label_menus_tab), :partial => 'left_menu/menus.rhtml' },
+                   { :name => 'projects-tab', :label => l(:label_projects_tab), :partial => 'left_menu/projects.rhtml' } ]
+        end
+      # Don't render the menus-tab unless specifically configured
+      elsif Setting.plugin_redmine_collapse['show_menus_tab'] == '1'
+        # => Redmine trunk@r2493?
+        if Redmine.const_defined?(:I18n)
+          tabs = [ { :name => 'actions-tab', :label => :label_actions_tab, :partial => 'left_menu/actions.rhtml' },
+                   { :name => 'menus-tab', :label => :label_menus_tab, :partial => 'left_menu/menus.rhtml' } ]
+        else
+          tabs = [ { :name => 'actions-tab', :label => l(:label_actions_tab), :partial => 'left_menu/actions.rhtml' },
+                   { :name => 'menus-tab', :label => l(:label_menus_tab), :partial => 'left_menu/menus.rhtml' } ]
+        end
       # Don't render the projects-tab unless specifically configured
-      if Setting.plugin_redmine_collapse['show_projects_tab'] == '1'
+      elsif Setting.plugin_redmine_collapse['show_projects_tab'] == '1'
         # => Redmine trunk@r2493?
         if Redmine.const_defined?(:I18n)
           tabs = [ { :name => 'actions-tab', :label => :label_actions_tab, :partial => 'left_menu/actions.rhtml' },
