@@ -1,0 +1,18 @@
+<h3><%= l(:label_menus_tab) %></h3>
+
+<% if Setting.plugin_redmine_collapse['show_projectmenu_in_menustab'] == '1' %>
+    <% if !@project.nil? %>
+        <h4><%= l(:label_project_menu) %></h4>
+        <div id="main-menu">
+            <%= render_main_menu(@project) %>
+        </div>
+    <% end %>
+<% end %>
+
+<h4><%= l(:label_global_menu) %></h4>
+<div id="main-menu">
+    <ul>
+        <li><%= link_to_unless_current l(:label_issue_view_all), { :controller => 'issues' } %></li>
+        <li><%= link_to_unless_current l(:label_overall_activity), { :controller => 'projects', :action => 'activity' }%></li>
+    </ul>
+</div>
