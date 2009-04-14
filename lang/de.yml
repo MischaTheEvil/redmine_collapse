@@ -2,6 +2,8 @@ label_actions_tab: Aktionen
 label_projects_tab: Projekte
 setting_collapse_position: Sidebar Position
 setting_collapse_showprojectstab: Zeige Projekte
+setting_collapse_showmenustab: Zeige den Menü-Reiter
+setting_collapse_showprojectmenuinmenustab: Projekt Menü im Menü-Reiter anzeigen
 setting_collapse_hideprojectselector: Verstecke die Haupt-Projekte Auswahl
 label_collapse_left: Links
 label_collapse_right: Rechts

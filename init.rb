@@ -16,6 +16,8 @@ Redmine::Plugin.register :redmine_collapse do
   settings :default => {
     'position' => '0',
     'show_projects_tab' => '1',
+    'show_menus_tab' => '0',
+    'show_projectmenu_in_menustab' => '0',
     'hide_project_selector' => '0'
   }, :partial => 'settings/collapse_settings'
 end
