@@ -1,6 +1,9 @@
 nl:
   label_actions_tab: Acties
+  label_menus_tab: Menu's
   label_projects_tab: Projecten
+  label_global_menu: Globaal menu
+  label_project_menu: Project menu
   setting_collapse_position: Zijbalk positie
   setting_collapse_showprojectstab: Toon de projecten tab
   setting_collapse_showmenustab: Toon de menu tab

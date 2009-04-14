@@ -1,5 +1,8 @@
 label_actions_tab: Actions
+label_menus_tab: Menus
 label_projects_tab: Projects
+label_global_menu: Global menu
+label_project_menu: Project menu
 setting_collapse_position: Sidebar position
 setting_collapse_showprojectstab: Show the projects tab
 setting_collapse_showmenustab: Show the menus tab
