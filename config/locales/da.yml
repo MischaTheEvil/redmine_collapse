@@ -2,7 +2,7 @@ da:
   label_actions_tab: Actions
   label_projects_tab: Projects
   setting_collapse_position: Sidebar position
-  setting_collapse_ptab: Show the projects tab
-  setting_hide_pselector: Hide the core project selector
+  setting_collapse_showprojectstab: Show the projects tab
+  setting_collapse_hideprojectselector: Hide the core project selector
   label_collapse_left: Left
   label_collapse_right: Right
