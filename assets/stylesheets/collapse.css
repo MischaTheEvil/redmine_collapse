@@ -59,13 +59,13 @@ html>body #content {
 #leftmenu-default #leftmenu .tabs { height: 2.95em; border-bottom: 1px solid #BBBBBB; position: relative; }
 #leftmenu-default #leftmenu .tab-content { margin-top: 1.2em; }
 
-#leftmenu-default #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 8px; }
+#leftmenu-default #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 6px; }
 #leftmenu-default #leftmenu .tabs>ul { bottom: -1px; } /* others */
 #leftmenu-default #leftmenu .tabs ul li {
     float: left;
     list-style-type: none;
     white-space: nowrap;
-    margin-right: 8px;
+    margin-right: 3px;
     background: #FFF;
 }
 #leftmenu-default #leftmenu .tabs ul li a{
@@ -157,13 +157,13 @@ html>body #content {
 #leftmenu-alternate #leftmenu .tabs { height: 1.92em; border-bottom: 1px solid #BBBBBB; position: relative; }
 #leftmenu-alternate #leftmenu .tab-content { margin-top: 1.2em; }
 
-#leftmenu-alternate #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 8px; }
+#leftmenu-alternate #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 6px; }
 #leftmenu-alternate #leftmenu .tabs>ul { bottom: -1px; } /* others */
 #leftmenu-alternate #leftmenu .tabs ul li {
     float: left;
     list-style-type: none;
     white-space: nowrap;
-    margin-right: 8px;
+    margin-right: 3px;
     background: #FFF;
 }
 #leftmenu-alternate #leftmenu .tabs ul li a{
@@ -255,13 +255,13 @@ html>body #content {
 #leftmenu-classic #leftmenu .tabs { height: 2.95em; border-bottom: 1px solid #BBBBBB; position: relative; }
 #leftmenu-classic #leftmenu .tab-content { margin-top: 1.2em; }
 
-#leftmenu-classic #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 8px; }
+#leftmenu-classic #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 6px; }
 #leftmenu-classic #leftmenu .tabs>ul { bottom: -1px; } /* others */
 #leftmenu-classic #leftmenu .tabs ul li {
     float: left;
     list-style-type: none;
     white-space: nowrap;
-    margin-right: 8px;
+    margin-right: 3px;
     background: #FFF;
 }
 #leftmenu-classic #leftmenu .tabs ul li a{
@@ -353,13 +353,13 @@ html>body #content {
 #leftmenu-basecamp #leftmenu .tabs { height: 1.95em; border-bottom: 1px solid #BBBBBB; position: relative; }
 #leftmenu-basecamp #leftmenu .tab-content { margin-top: 1.2em; }
 
-#leftmenu-basecamp #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 8px; }
+#leftmenu-basecamp #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 6px; }
 #leftmenu-basecamp #leftmenu .tabs>ul { bottom: -1px; } /* others */
 #leftmenu-basecamp #leftmenu .tabs ul li {
     float: left;
     list-style-type: none;
     white-space: nowrap;
-    margin-right: 8px;
+    margin-right: 3px;
     background: #FFF;
 }
 #leftmenu-basecamp #leftmenu .tabs ul li a{
@@ -451,13 +451,13 @@ html>body #content {
 #leftmenu-squeejee #leftmenu .tabs { height: 2.90em; border-bottom: 1px solid #BBBBBB; position: relative; }
 #leftmenu-squeejee #leftmenu .tab-content { margin-top: 1.2em; }
 
-#leftmenu-squeejee #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 8px; }
+#leftmenu-squeejee #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 6px; }
 #leftmenu-squeejee #leftmenu .tabs>ul { bottom: -1px; } /* others */
 #leftmenu-squeejee #leftmenu .tabs ul li {
     float: left;
     list-style-type: none;
     white-space: nowrap;
-    margin-right: 8px;
+    margin-right: 3px;
     background: #FFF;
 }
 #leftmenu-squeejee #leftmenu .tabs ul li a{
