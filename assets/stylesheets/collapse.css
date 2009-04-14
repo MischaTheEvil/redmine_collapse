@@ -98,6 +98,35 @@ html>body #content {
     text-align: left;
 }
 
+/***** The menus tab *****/
+#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu {
+  margin-right: 0px;
+  position: inherit;
+}
+#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu ul li {
+  float:none;
+  list-style-type:none;
+  white-space:wrap;
+}
+
+#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a {
+  display: block;
+  color: #2A5685;
+  text-decoration: none;
+  margin: 0;
+  padding: 4px 10px 4px 0px;
+  font-weight: normal;
+}
+#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
+  background:#fff;
+  color:#C61A1A;
+}
+#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
+#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
+  background:#fff;
+  color:#555;
+}
+
 /***** The projects tab *****/
 #main #leftmenu-default #leftmenu #tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
@@ -194,6 +223,35 @@ html>body #content {
 /***** The actions tab *****/
 #main #leftmenu-alternate #leftmenu #tab-content-actions-tab {
     text-align: left;
+}
+
+/***** The menus tab *****/
+#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu {
+  margin-right: 0px;
+  position: inherit;
+}
+#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu ul li {
+  float:none;
+  list-style-type:none;
+  white-space:wrap;
+}
+
+#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a {
+  display: block;
+  color: #2A5685;
+  text-decoration: none;
+  margin: 0;
+  padding: 4px 10px 4px 0px;
+  font-weight: normal;
+}
+#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
+  background:#fff;
+  color:#C61A1A;
+}
+#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
+#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
+  background:#fff;
+  color:#555;
 }
 
 /***** The projects tab *****/
@@ -294,6 +352,35 @@ html>body #content {
     text-align: left;
 }
 
+/***** The menus tab *****/
+#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu {
+  margin-right: 0px;
+  position: inherit;
+}
+#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu ul li {
+  float:none;
+  list-style-type:none;
+  white-space:wrap;
+}
+
+#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a {
+  display: block;
+  color: #2A5685;
+  text-decoration: none;
+  margin: 0;
+  padding: 4px 10px 4px 0px;
+  font-weight: normal;
+}
+#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
+  background:#fff;
+  color:#C61A1A;
+}
+#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
+#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
+  background:#fff;
+  color:#555;
+}
+
 /***** The projects tab *****/
 #main #leftmenu-classic #leftmenu #tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
@@ -390,6 +477,35 @@ html>body #content {
 /***** The actions tab *****/
 #main #leftmenu-basecamp #leftmenu #tab-content-actions-tab {
     text-align: left;
+}
+
+/***** The menus tab *****/
+#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu {
+  margin-right: 0px;
+  position: inherit;
+}
+#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu ul li {
+  float:none;
+  list-style-type:none;
+  white-space:wrap;
+}
+
+#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a {
+  display: block;
+  color: #2A5685;
+  text-decoration: none;
+  margin: 0;
+  padding: 4px 10px 4px 0px;
+  font-weight: normal;
+}
+#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
+  background:#fff;
+  color:#C61A1A;
+}
+#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
+#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
+  background:#fff;
+  color:#555;
 }
 
 /***** The projects tab *****/
@@ -504,6 +620,35 @@ html>body #content {
 /***** The actions tab *****/
 #main #leftmenu-squeejee #leftmenu #tab-content-actions-tab {
     text-align: left;
+}
+
+/***** The menus tab *****/
+#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu {
+  margin-right: 0px;
+  position: inherit;
+}
+#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu ul li {
+  float:none;
+  list-style-type:none;
+  white-space:wrap;
+}
+
+#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a {
+  display: block;
+  color: #2A5685;
+  text-decoration: none;
+  margin: 0;
+  padding: 4px 10px 4px 0px;
+  font-weight: normal;
+}
+#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
+  background:#fff;
+  color:#C61A1A;
+}
+#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
+#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
+  background:#fff;
+  color:#555;
 }
 
 /***** The projects tab *****/
