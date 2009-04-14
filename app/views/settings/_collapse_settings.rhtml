@@ -1,22 +1,15 @@
-<p><label><%= l(:setting_collapse_showprojectstab) %></label>
-<%= select_tag 'settings[show_projects_tab]',
-      options_for_select( [[l(:general_text_No), "0"],
-                           [l(:general_text_Yes), "1"]
-                          ], @settings ['show_projects_tab'] )
-%>
+<p>
+  <label><%= l(:setting_collapse_showprojectstab) %></label>
+  <%= check_box_tag 'settings[show_projects_tab]', 1, Setting.plugin_redmine_collapse['show_projects_tab'] == '1' %>
+  <%= hidden_field_tag 'settings[show_projects_tab]', 0 %>
 </p>
-<p><label><%= l(:setting_collapse_hideprojectselector) %></label>
-<%= select_tag 'settings[hide_project_selector]',
-      options_for_select( [[l(:general_text_No), "0"],
-                           [l(:general_text_Yes), "1"]
-                          ], @settings ['hide_project_selector'] )
-%>
+<p>
+  <label><%= l(:setting_collapse_hideprojectselector) %></label>
+  <%= check_box_tag 'settings[hide_project_selector]', 1, Setting.plugin_redmine_collapse['hide_project_selector'] == '1' %>
+  <%= hidden_field_tag 'settings[hide_project_selector]', 0 %>
 </p>
-<p><label><%= l(:setting_collapse_position) %></label>
-<%= select_tag 'settings[position]',
-      options_for_select( [[l(:label_collapse_left), "0"],
-                           [l(:label_collapse_right), "1"]
-                          ], @settings ['position'] )
-%>
-(Not yet implemented)
+<p>
+  <label><%= l(:setting_collapse_position) %></label>
+  <%= select_tag 'settings[position]', options_for_select( [[l(:label_collapse_left), "0"], [l(:label_collapse_right), "1"]], @settings ['position'] ) %>
+  (Not yet implemented)
 </p>
