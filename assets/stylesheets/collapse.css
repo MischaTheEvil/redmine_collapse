@@ -107,7 +107,7 @@ html>body #content {
 /***** The menus tab *****/
 #main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu {
   margin-right: 0px;
-  position: inherit;
+  position: static;
 }
 #main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu ul li {
   float:none;
@@ -247,7 +247,7 @@ html>body #content {
 /***** The menus tab *****/
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu {
   margin-right: 0px;
-  position: inherit;
+  position: static;
 }
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu ul li {
   float:none;
@@ -387,7 +387,7 @@ html>body #content {
 /***** The menus tab *****/
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu {
   margin-right: 0px;
-  position: inherit;
+  position: static;
 }
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu ul li {
   float:none;
@@ -527,7 +527,7 @@ html>body #content {
 /***** The menus tab *****/
 #main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu {
   margin-right: 0px;
-  position: inherit;
+  position: static;
 }
 #main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu ul li {
   float:none;
@@ -683,7 +683,7 @@ html>body #content {
 /***** The menus tab *****/
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu {
   margin-right: 0px;
-  position: inherit;
+  position: static;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu ul li {
   float:none;
