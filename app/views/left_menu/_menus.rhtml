@@ -13,6 +13,6 @@
 <div id="main-menu">
     <ul>
         <li><%= link_to_unless_current l(:label_issue_view_all), { :controller => 'issues' } %></li>
-        <li><%= link_to_unless_current l(:label_overall_activity), { :controller => 'projects', :action => 'activity' }%></li>
+        <li><%= link_to_unless_current l(:label_overall_activity), { :controller => 'activity' }%></li>
     </ul>
 </div>
