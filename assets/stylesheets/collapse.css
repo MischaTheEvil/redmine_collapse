@@ -47,7 +47,7 @@ html>body #content {
 /***** The actual sidebar wherein tabs reside *****/
 #main #leftmenu-default #leftmenu #leftmenu-contents {
     position: relative;
-    width: 200px;
+    width: 210px;
     text-align: left;
 }
 
@@ -65,7 +65,7 @@ html>body #content {
     float: left;
     list-style-type: none;
     white-space: nowrap;
-    margin-right: 3px;
+    margin-right: 4px;
     background: #FFF;
 }
 #leftmenu-default #leftmenu .tabs ul li a{
@@ -73,7 +73,7 @@ html>body #content {
     font-size: 0.9em;
     text-decoration: none;
     line-height: 1.3em;
-    padding: 4px 5px 4px 5px;
+    padding: 4px 6px 4px 6px;
     border: 1px solid #ccc;
     border-bottom: 1px solid #BBBBBB;
     background-color: #EEEEEE;
@@ -174,7 +174,7 @@ html>body #content {
 /***** The actual sidebar wherein tabs reside *****/
 #main #leftmenu-alternate #leftmenu #leftmenu-contents {
     position: relative;
-    width: 200px;
+    width: 210px;
     text-align: left;
 }
 
@@ -192,7 +192,7 @@ html>body #content {
     float: left;
     list-style-type: none;
     white-space: nowrap;
-    margin-right: 3px;
+    margin-right: 4px;
     background: #FFF;
 }
 #leftmenu-alternate #leftmenu .tabs ul li a{
@@ -200,7 +200,7 @@ html>body #content {
     font-size: 0.9em;
     text-decoration: none;
     line-height: 1.3em;
-    padding: 4px 5px 4px 5px;
+    padding: 4px 6px 4px 6px;
     border: 1px solid #ccc;
     border-bottom: 1px solid #BBBBBB;
     background-color: #FFF;
@@ -301,7 +301,7 @@ html>body #content {
 /***** The actual sidebar wherein tabs reside *****/
 #main #leftmenu-classic #leftmenu #leftmenu-contents {
     position: relative;
-    width: 200px;
+    width: 210px;
     text-align: left;
 }
 
@@ -319,7 +319,7 @@ html>body #content {
     float: left;
     list-style-type: none;
     white-space: nowrap;
-    margin-right: 3px;
+    margin-right: 4px;
     background: #FFF;
 }
 #leftmenu-classic #leftmenu .tabs ul li a{
@@ -327,7 +327,7 @@ html>body #content {
     font-size: 0.9em;
     text-decoration: none;
     line-height: 1.3em;
-    padding: 4px 5px 4px 5px;
+    padding: 4px 6px 4px 6px;
     border: 1px solid #ccc;
     border-bottom: 1px solid #BBBBBB;
     background-color: #EEE;
@@ -428,7 +428,7 @@ html>body #content {
 /***** The actual sidebar wherein tabs reside *****/
 #main #leftmenu-basecamp #leftmenu #leftmenu-contents {
     position: relative;
-    width: 200px;
+    width: 210px;
     text-align: left;
 }
 
@@ -446,7 +446,7 @@ html>body #content {
     float: left;
     list-style-type: none;
     white-space: nowrap;
-    margin-right: 3px;
+    margin-right: 4px;
     background: #FFF;
 }
 #leftmenu-basecamp #leftmenu .tabs ul li a{
@@ -454,7 +454,7 @@ html>body #content {
     font-size: 0.9em;
     text-decoration: none;
     line-height: 1.3em;
-    padding: 4px 5px 4px 5px;
+    padding: 4px 6px 4px 6px;
     border: 1px solid #ccc;
     border-bottom: 1px solid #BBBBBB;
     background-color: #FFF;
@@ -555,7 +555,7 @@ html>body #content {
 /***** The actual sidebar wherein tabs reside *****/
 #main #leftmenu-squeejee #leftmenu #leftmenu-contents {
     position: relative;
-    width: 200px;
+    width: 210px;
     text-align: left;
 }
 
@@ -573,7 +573,7 @@ html>body #content {
     float: left;
     list-style-type: none;
     white-space: nowrap;
-    margin-right: 3px;
+    margin-right: 4px;
     background: #FFF;
 }
 #leftmenu-squeejee #leftmenu .tabs ul li a{
@@ -581,7 +581,7 @@ html>body #content {
     font-size: 0.9em;
     text-decoration: none;
     line-height: 1.3em;
-    padding: 4px 5px 4px 5px;
+    padding: 4px 6px 4px 6px;
     border: 1px solid #ccc;
     border-bottom: 1px solid #BBBBBB;
     background-color: #E0E0E0;
