@@ -48,7 +48,6 @@ html>body #content {
 #main #leftmenu-default #leftmenu #leftmenu-contents {
     position: relative;
     width: 210px;
-    text-align: left;
 }
 
 /*****
@@ -73,7 +72,6 @@ html>body #content {
 #leftmenu-default #leftmenu .tabs ul li {
     float: left;
     list-style-type: none;
-    white-space: nowrap;
     margin-right: 4px;
     background: #FFF;
 }
@@ -104,7 +102,6 @@ html>body #content {
 
 /***** The actions tab *****/
 #main #leftmenu-default #leftmenu #tab-content-actions-tab {
-    text-align: left;
 }
 
 /***** The menus tab *****/
@@ -115,14 +112,12 @@ html>body #content {
 #main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu ul li {
   float:none;
   list-style-type:none;
-  white-space:wrap;
 }
 
 #main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a {
   display: block;
   color: #2A5685;
   text-decoration: none;
-  margin: 0;
   padding: 4px 10px 4px 0px;
   font-weight: normal;
 }
@@ -159,9 +154,6 @@ html>body #content {
     background: #fff;
     color: #555;
 }
-#main #leftmenu-default #leftmenu #tab-content-projects-tab a.current {
-    font-weight: bold;
-}
 
 /******************** ALTERNATE THEME ********************/
 
@@ -196,7 +188,6 @@ html>body #content {
 #main #leftmenu-alternate #leftmenu #leftmenu-contents {
     position: relative;
     width: 210px;
-    text-align: left;
 }
 
 /*****
@@ -221,7 +212,6 @@ html>body #content {
 #leftmenu-alternate #leftmenu .tabs ul li {
     float: left;
     list-style-type: none;
-    white-space: nowrap;
     margin-right: 4px;
     background: #FFF;
 }
@@ -252,7 +242,6 @@ html>body #content {
 
 /***** The actions tab *****/
 #main #leftmenu-alternate #leftmenu #tab-content-actions-tab {
-    text-align: left;
 }
 
 /***** The menus tab *****/
@@ -263,14 +252,12 @@ html>body #content {
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu ul li {
   float:none;
   list-style-type:none;
-  white-space:wrap;
 }
 
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a {
   display: block;
   color: #2A5685;
   text-decoration: none;
-  margin: 0;
   padding: 4px 10px 4px 0px;
   font-weight: normal;
 }
@@ -307,9 +294,6 @@ html>body #content {
     background: #fff;
     color: #555;
 }
-#main #leftmenu-alternate #leftmenu #tab-content-projects-tab a.current {
-    font-weight: bold;
-}
 
 /******************** CLASSIC THEME ********************/
 
@@ -344,7 +328,6 @@ html>body #content {
 #main #leftmenu-classic #leftmenu #leftmenu-contents {
     position: relative;
     width: 210px;
-    text-align: left;
 }
 
 /*****
@@ -369,7 +352,6 @@ html>body #content {
 #leftmenu-classic #leftmenu .tabs ul li {
     float: left;
     list-style-type: none;
-    white-space: nowrap;
     margin-right: 4px;
     background: #FFF;
 }
@@ -400,7 +382,6 @@ html>body #content {
 
 /***** The actions tab *****/
 #main #leftmenu-classic #leftmenu #tab-content-actions-tab {
-    text-align: left;
 }
 
 /***** The menus tab *****/
@@ -411,14 +392,12 @@ html>body #content {
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu ul li {
   float:none;
   list-style-type:none;
-  white-space:wrap;
 }
 
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a {
   display: block;
   color: #2A5685;
   text-decoration: none;
-  margin: 0;
   padding: 4px 10px 4px 0px;
   font-weight: normal;
 }
@@ -455,9 +434,6 @@ html>body #content {
     background: #fff;
     color: #555;
 }
-#main #leftmenu-classic #leftmenu #tab-content-projects-tab a.current {
-    font-weight: bold;
-}
 
 /******************** BASECAMP THEME ********************/
 
@@ -492,7 +468,6 @@ html>body #content {
 #main #leftmenu-basecamp #leftmenu #leftmenu-contents {
     position: relative;
     width: 210px;
-    text-align: left;
 }
 
 /*****
@@ -517,7 +492,6 @@ html>body #content {
 #leftmenu-basecamp #leftmenu .tabs ul li {
     float: left;
     list-style-type: none;
-    white-space: nowrap;
     margin-right: 4px;
     background: #FFF;
 }
@@ -548,7 +522,6 @@ html>body #content {
 
 /***** The actions tab *****/
 #main #leftmenu-basecamp #leftmenu #tab-content-actions-tab {
-    text-align: left;
 }
 
 /***** The menus tab *****/
@@ -559,14 +532,12 @@ html>body #content {
 #main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu ul li {
   float:none;
   list-style-type:none;
-  white-space:wrap;
 }
 
 #main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a {
   display: block;
   color: #2A5685;
   text-decoration: none;
-  margin: 0;
   padding: 4px 10px 4px 0px;
   font-weight: normal;
 }
@@ -603,9 +574,6 @@ html>body #content {
     background: #fff;
     color: #555;
 }
-#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab a.current {
-    font-weight: bold;
-}
 
 /******************** SQUEEJEE THEME ********************/
 
@@ -640,7 +608,6 @@ html>body #content {
 #main #leftmenu-squeejee #leftmenu #leftmenu-contents {
     position: relative;
     width: 210px;
-    text-align: left;
 }
 
 /*****
@@ -665,7 +632,6 @@ html>body #content {
 #leftmenu-squeejee #leftmenu .tabs ul li {
     float: left;
     list-style-type: none;
-    white-space: nowrap;
     margin-right: 4px;
     background: #FFF;
 }
@@ -712,7 +678,6 @@ html>body #content {
 
 /***** The actions tab *****/
 #main #leftmenu-squeejee #leftmenu #tab-content-actions-tab {
-    text-align: left;
 }
 
 /***** The menus tab *****/
@@ -723,14 +688,12 @@ html>body #content {
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu ul li {
   float:none;
   list-style-type:none;
-  white-space:wrap;
 }
 
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a {
   display: block;
   color: #2A5685;
   text-decoration: none;
-  margin: 0;
   padding: 4px 10px 4px 0px;
   font-weight: normal;
 }
@@ -766,7 +729,4 @@ html>body #content {
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a.selected:hover {
     background: #fff;
     color: #555;
-}
-#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab a.current {
-    font-weight: bold;
 }
