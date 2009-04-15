@@ -141,11 +141,23 @@ html>body #content {
     margin-left: -25px;
 }
 #main #leftmenu-default #leftmenu #tab-content-projects-tab ul ul {
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
-#main #leftmenu-default #leftmenu #tab-content-projects-tab a {
-    text-decoration: none;
+#main #leftmenu-default #leftmenu #tab-content-projects-tab li a {
     display: block;
+    color: #2A5685;
+    text-decoration: none;
+    padding: 4px 10px 4px 0px;
+    font-weight: normal;
+}
+#main #leftmenu-default #leftmenu #tab-content-projects-tab li a:hover {
+    background: #fff;
+    color: #C61A1A;
+}
+#main #leftmenu-default #leftmenu #tab-content-projects-tab li a.selected,
+#main #leftmenu-default #leftmenu #tab-content-projects-tab li a.selected:hover {
+    background: #fff;
+    color: #555;
 }
 #main #leftmenu-default #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
@@ -277,11 +289,23 @@ html>body #content {
     margin-left: -25px;
 }
 #main #leftmenu-alternate #leftmenu #tab-content-projects-tab ul ul {
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
-#main #leftmenu-alternate #leftmenu #tab-content-projects-tab a {
-    text-decoration: none;
+#main #leftmenu-alternate #leftmenu #tab-content-projects-tab li a {
     display: block;
+    color: #2A5685;
+    text-decoration: none;
+    padding: 4px 10px 4px 0px;
+    font-weight: normal;
+}
+#main #leftmenu-alternate #leftmenu #tab-content-projects-tab li a:hover {
+    background: #fff;
+    color: #C61A1A;
+}
+#main #leftmenu-alternate #leftmenu #tab-content-projects-tab li a.selected,
+#main #leftmenu-alternate #leftmenu #tab-content-projects-tab li a.selected:hover {
+    background: #fff;
+    color: #555;
 }
 #main #leftmenu-alternate #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
@@ -413,11 +437,23 @@ html>body #content {
     margin-left: -25px;
 }
 #main #leftmenu-classic #leftmenu #tab-content-projects-tab ul ul {
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
-#main #leftmenu-classic #leftmenu #tab-content-projects-tab a {
-    text-decoration: none;
+#main #leftmenu-classic #leftmenu #tab-content-projects-tab li a {
     display: block;
+    color: #2A5685;
+    text-decoration: none;
+    padding: 4px 10px 4px 0px;
+    font-weight: normal;
+}
+#main #leftmenu-classic #leftmenu #tab-content-projects-tab li a:hover {
+    background: #fff;
+    color: #C61A1A;
+}
+#main #leftmenu-classic #leftmenu #tab-content-projects-tab li a.selected,
+#main #leftmenu-classic #leftmenu #tab-content-projects-tab li a.selected:hover {
+    background: #fff;
+    color: #555;
 }
 #main #leftmenu-classic #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
@@ -549,11 +585,23 @@ html>body #content {
     margin-left: -25px;
 }
 #main #leftmenu-basecamp #leftmenu #tab-content-projects-tab ul ul {
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
-#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab a {
-    text-decoration: none;
+#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab li a {
     display: block;
+    color: #2A5685;
+    text-decoration: none;
+    padding: 4px 10px 4px 0px;
+    font-weight: normal;
+}
+#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab li a:hover {
+    background: #fff;
+    color: #C61A1A;
+}
+#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab li a.selected,
+#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab li a.selected:hover {
+    background: #fff;
+    color: #555;
 }
 #main #leftmenu-basecamp #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
@@ -701,11 +749,23 @@ html>body #content {
     margin-left: -25px;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab ul ul {
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab a {
-    text-decoration: none;
+#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a {
     display: block;
+    color: #2A5685;
+    text-decoration: none;
+    padding: 4px 10px 4px 0px;
+    font-weight: normal;
+}
+#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a:hover {
+    background: #fff;
+    color: #C61A1A;
+}
+#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a.selected,
+#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a.selected:hover {
+    background: #fff;
+    color: #555;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab a.current {
     font-weight: bold;
