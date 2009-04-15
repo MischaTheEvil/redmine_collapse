@@ -56,10 +56,19 @@ html>body #content {
 *****/
 
 /***** The global tab layout *****/
-#leftmenu-default #leftmenu .tabs { height: 2.95em; border-bottom: 1px solid #BBBBBB; position: relative; }
+#leftmenu-default #leftmenu .tabs {
+    height: 2.95em;
+    border-bottom: 1px solid #BBBBBB;
+    position: relative;
+}
 #leftmenu-default #leftmenu .tab-content { margin-top: 1.2em; }
 
-#leftmenu-default #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 6px; }
+#leftmenu-default #leftmenu .tabs ul {
+    margin: 0;
+    position: absolute;
+    bottom: -2px;
+    padding-left: 6px;
+}
 #leftmenu-default #leftmenu .tabs>ul { bottom: -1px; } /* others */
 #leftmenu-default #leftmenu .tabs ul li {
     float: left;
@@ -183,10 +192,19 @@ html>body #content {
 *****/
 
 /***** The global tab layout *****/
-#leftmenu-alternate #leftmenu .tabs { height: 1.92em; border-bottom: 1px solid #BBBBBB; position: relative; }
+#leftmenu-alternate #leftmenu .tabs {
+    height: 1.92em;
+    border-bottom: 1px solid #BBBBBB;
+    position: relative;
+}
 #leftmenu-alternate #leftmenu .tab-content { margin-top: 1.2em; }
 
-#leftmenu-alternate #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 6px; }
+#leftmenu-alternate #leftmenu .tabs ul {
+    margin: 0;
+    position: absolute;
+    bottom: -2px;
+    padding-left: 6px;
+}
 #leftmenu-alternate #leftmenu .tabs>ul { bottom: -1px; } /* others */
 #leftmenu-alternate #leftmenu .tabs ul li {
     float: left;
@@ -310,10 +328,19 @@ html>body #content {
 *****/
 
 /***** The global tab layout *****/
-#leftmenu-classic #leftmenu .tabs { height: 2.95em; border-bottom: 1px solid #BBBBBB; position: relative; }
+#leftmenu-classic #leftmenu .tabs {
+    height: 2.95em;
+    border-bottom: 1px solid #BBBBBB;
+    position: relative;
+}
 #leftmenu-classic #leftmenu .tab-content { margin-top: 1.2em; }
 
-#leftmenu-classic #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 6px; }
+#leftmenu-classic #leftmenu .tabs ul {
+    margin: 0;
+    position: absolute;
+    bottom: -2px;
+    padding-left: 6px;
+}
 #leftmenu-classic #leftmenu .tabs>ul { bottom: -1px; } /* others */
 #leftmenu-classic #leftmenu .tabs ul li {
     float: left;
@@ -437,10 +464,19 @@ html>body #content {
 *****/
 
 /***** The global tab layout *****/
-#leftmenu-basecamp #leftmenu .tabs { height: 1.95em; border-bottom: 1px solid #BBBBBB; position: relative; }
+#leftmenu-basecamp #leftmenu .tabs {
+    height: 1.95em;
+    border-bottom: 1px solid #BBBBBB;
+    position: relative;
+}
 #leftmenu-basecamp #leftmenu .tab-content { margin-top: 1.2em; }
 
-#leftmenu-basecamp #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 6px; }
+#leftmenu-basecamp #leftmenu .tabs ul {
+    margin: 0;
+    position: absolute;
+    bottom: -2px;
+    padding-left: 6px;
+}
 #leftmenu-basecamp #leftmenu .tabs>ul { bottom: -1px; } /* others */
 #leftmenu-basecamp #leftmenu .tabs ul li {
     float: left;
@@ -564,10 +600,19 @@ html>body #content {
 *****/
 
 /***** The global tab layout *****/
-#leftmenu-squeejee #leftmenu .tabs { height: 2.90em; border-bottom: 1px solid #BBBBBB; position: relative; }
+#leftmenu-squeejee #leftmenu .tabs {
+    height: 2.90em;
+    border-bottom: 1px solid #BBBBBB;
+    position: relative;
+}
 #leftmenu-squeejee #leftmenu .tab-content { margin-top: 1.2em; }
 
-#leftmenu-squeejee #leftmenu .tabs ul { margin: 0; position: absolute; bottom: -2px; padding-left: 6px; }
+#leftmenu-squeejee #leftmenu .tabs ul {
+    margin: 0;
+    position: absolute;
+    bottom: -2px;
+    padding-left: 6px;
+}
 #leftmenu-squeejee #leftmenu .tabs>ul { bottom: -1px; } /* others */
 #leftmenu-squeejee #leftmenu .tabs ul li {
     float: left;
