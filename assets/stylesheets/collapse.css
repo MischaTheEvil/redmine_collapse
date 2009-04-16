@@ -400,11 +400,12 @@ html>body #content {
 
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a {
   display: block;
-  color: #2A5685;
+  color: #467AA7;
   background-color: #fff;
   text-decoration: none;
   padding: 4px 10px 4px 0px;
   font-weight: bold;
+  font-size:100%;
 }
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
   background:#fff;
