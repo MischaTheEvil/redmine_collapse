@@ -259,17 +259,18 @@ html>body #content {
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a {
   display: block;
   color: #2A5685;
+  background-color: #eee;
   text-decoration: none;
   padding: 4px 10px 4px 0px;
   font-weight: normal;
 }
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
-  background:#fff;
+  background:#eee;
   color:#C61A1A;
 }
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
-  background:#fff;
+  background:#eee;
   color:#555;
 }
 
@@ -288,12 +289,12 @@ html>body #content {
     font-weight: normal;
 }
 #main #leftmenu-alternate #leftmenu #tab-content-projects-tab li a:hover {
-    background: #fff;
+    background: #eee;
     color: #C61A1A;
 }
 #main #leftmenu-alternate #leftmenu #tab-content-projects-tab li a.selected,
 #main #leftmenu-alternate #leftmenu #tab-content-projects-tab li a.selected:hover {
-    background: #fff;
+    background: #eee;
     color: #555;
 }
 
