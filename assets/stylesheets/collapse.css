@@ -46,6 +46,7 @@ html>body #content {
 
 /***** The actual sidebar wherein tabs reside *****/
 #main #leftmenu-default #leftmenu #leftmenu-contents {
+    margin-bottom: 5em;
     position: relative;
     width: 210px;
 }
@@ -186,6 +187,7 @@ html>body #content {
 
 /***** The actual sidebar wherein tabs reside *****/
 #main #leftmenu-alternate #leftmenu #leftmenu-contents {
+    margin-bottom: 5em;
     position: relative;
     width: 210px;
 }
@@ -326,6 +328,7 @@ html>body #content {
 
 /***** The actual sidebar wherein tabs reside *****/
 #main #leftmenu-classic #leftmenu #leftmenu-contents {
+    margin-bottom: 5em;
     position: relative;
     width: 210px;
 }
@@ -466,6 +469,7 @@ html>body #content {
 
 /***** The actual sidebar wherein tabs reside *****/
 #main #leftmenu-basecamp #leftmenu #leftmenu-contents {
+    margin-bottom: 5em;
     position: relative;
     width: 210px;
 }
@@ -606,6 +610,7 @@ html>body #content {
 
 /***** The actual sidebar wherein tabs reside *****/
 #main #leftmenu-squeejee #leftmenu #leftmenu-contents {
+    margin-bottom: 5em;
     position: relative;
     width: 210px;
 }
