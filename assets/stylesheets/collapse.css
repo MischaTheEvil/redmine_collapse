@@ -726,17 +726,17 @@ html>body #content {
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a {
     display: block;
-    color: #2A5685;
+    color: #8C8C8C;
     text-decoration: none;
     padding: 4px 10px 4px 0px;
-    font-weight: normal;
+    font-weight: bold;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a:hover {
-    background: #fff;
-    color: #C61A1A;
+    background: #333;
+    color: #B3B3B3;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a.selected,
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a.selected:hover {
-    background: #fff;
-    color: #555;
+    background: #333;
+    color: #B3B3B3;
 }
