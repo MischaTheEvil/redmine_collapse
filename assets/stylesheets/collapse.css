@@ -721,15 +721,24 @@ html>body #content {
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
 }
+#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab ul li {
+    background: #111 url(/themes/squeejee/images/bottom_shine.png) 0px -40px repeat-x;
+    border: solid 1px #333;
+    border-width: 1px 1px 0px 0px;
+}
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab ul ul {
     margin-bottom: 4px;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a {
     display: block;
     color: #8C8C8C;
+    background: #333;
     text-decoration: none;
     padding: 4px 10px 4px 0px;
     font-weight: bold;
+}
+#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li:hover {
+    border-color: #555;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a:hover {
     background: #333;
@@ -738,5 +747,6 @@ html>body #content {
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a.selected,
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a.selected:hover {
     background: #333;
+    border-color: #444;
     color: #B3B3B3;
 }
