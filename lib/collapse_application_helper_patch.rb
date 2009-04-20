@@ -91,7 +91,74 @@ module CollapseApplicationHelperPatch
       end
       s
     end
-
+    
+    # Renders the projects as a tree of unordered lists (Redmine 0.8.x)
+    def render_projects_tree(projects)
+      s = ''
+      if projects.any?
+        s << "<ul>\n"
+        projects.keys.sort.each do |root|
+          if jump_to_current_view_implemented == true
+            s << "<li>" +
+                        if !@project.nil?
+                          if (root.identifier == @project.identifier)
+                            link_to (h(root), {:controller => 'projects', :action => 'show', :id => root, :jump => current_menu_item}, :class => 'selected')
+                          else
+                            link_to (h(root), {:controller => 'projects', :action => 'show', :id => root, :jump => current_menu_item})
+                          end
+                        else
+                          link_to (h(root), {:controller => 'projects', :action => 'show', :id => root})
+                        end
+            s << "</li>\n"
+          else
+            s << "<li>" +
+                        if !@project.nil?
+                          if (root.identifier == @project.identifier)
+                            link_to (h(root), {:controller => 'projects', :action => 'show', :id => root}, :class => 'selected')
+                          else
+                            link_to (h(root), {:controller => 'projects', :action => 'show', :id => root})
+                          end
+                        else
+                          link_to (h(root), {:controller => 'projects', :action => 'show', :id => root})
+                        end
+            s << "</li>\n"
+          end
+          s << "<ul>\n"
+          projects[root].sort.each do |project|
+            next if project == root
+            if jump_to_current_view_implemented == true
+              s << "<li>" +
+                          if !@project.nil?
+                            if (project.identifier == @project.identifier)
+                              link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => 'selected')
+                            else
+                              link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item})
+                            end
+                          else
+                            link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
+                          end
+              s << "</li>\n"
+            else
+              s << "<li>" +
+                          if !@project.nil?
+                            if (project.identifier == @project.identifier)
+                              link_to (h(project), {:controller => 'projects', :action => 'show', :id => project}, :class => 'selected')
+                            else
+                              link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
+                            end
+                          else
+                            link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
+                          end
+              s << "</li>\n"
+            end
+          end
+          s << "</ul>\n"
+        end
+        s << "</ul>\n"
+      end
+      s
+    end
+    
     # Left-menu tabs renderer
     # Returns an array named 'tabs' containing the left-menu tabs to render
     def left_menu_tabs
