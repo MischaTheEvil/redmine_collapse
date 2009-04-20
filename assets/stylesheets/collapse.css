@@ -131,6 +131,11 @@ html>body #content {
   background:#fff;
   color:#555;
 }
+#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
+#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
+  background: #fff;
+  color: #555;
+}
 
 /***** The projects tab *****/
 #main #leftmenu-default #leftmenu #tab-content-projects-tab div#projects-tree {
@@ -272,6 +277,11 @@ html>body #content {
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
   background:#eee;
   color:#555;
+}
+#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
+#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
+  background: #eee;
+  color: #555;
 }
 
 /***** The projects tab *****/
@@ -416,6 +426,11 @@ html>body #content {
   background:#fff;
   color:#555;
 }
+#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
+#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
+  background: #fff;
+  color: #555;
+}
 
 /***** The projects tab *****/
 #main #leftmenu-classic #leftmenu #tab-content-projects-tab div#projects-tree {
@@ -558,6 +573,11 @@ html>body #content {
 #main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
   background:#eee;
   color:#555;
+}
+#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
+#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
+  background: #eee;
+  color: #555;
 }
 
 /***** The projects tab *****/
