@@ -63,10 +63,12 @@ module CollapseApplicationHelperPatch
     # Renders the projects as a nested set of unordered lists  (Redmine 0.9.x)
     # The given collection may be a subset of the whole project tree
     # (eg. some intermediate nodes are private and can not be seen)
+    # Returns a string containing the HTML for the bleeding-edge projects tab
     def render_projects_nestedset(projects)
       s = ''
       if projects.any?
         ancestors = []
+        # Iterate over the projects
         projects.each do |project|
           if (ancestors.empty? || project.is_descendant_of?(ancestors.last))
             s << "<ul class='projects #{ ancestors.empty? ? 'root' : nil}'>\n"
@@ -80,7 +82,9 @@ module CollapseApplicationHelperPatch
           end
           classes = (ancestors.empty? ? 'root' : 'child')
           s << "<li>" +
+                      # Only add ':jump => current_menu_item' URL-parameter if on project level
                       if !@project.nil?
+                        # Only add ':class => selected' URL-parameter if the current project (@project) is equal to project (project)
                         if (project.identifier == @project.identifier)
                           link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => 'selected')
                         else
@@ -93,18 +97,22 @@ module CollapseApplicationHelperPatch
         end
         s << ("</li></ul>\n" * ancestors.size)
       end
-      s
+      return s
     end
     
     # Renders the projects as a tree of unordered lists (Redmine 0.8.x)
+    # Returns a string containing the HTML for the legacy projects tab
     def render_projects_tree(projects)
       s = ''
       if projects.any?
         s << "<ul>\n"
+        # Iterate over the root-projects
         projects.keys.sort.each do |root|
           if jump_to_current_view_implemented == true
             s << "<li>" +
+                        # Only add ':jump => current_menu_item' URL-parameter if on project level
                         if !@project.nil?
+                          # Only add ':class => selected' URL-parameter if the current project (@project) is equal to project (project)
                           if (root.identifier == @project.identifier)
                             link_to (h(root), {:controller => 'projects', :action => 'show', :id => root, :jump => current_menu_item}, :class => 'selected')
                           else
@@ -116,7 +124,9 @@ module CollapseApplicationHelperPatch
             s << "</li>\n"
           else
             s << "<li>" +
+                        # Only add ':jump => current_menu_item' URL-parameter if on project level
                         if !@project.nil?
+                          # Only add ':class => selected' URL-parameter if the current project (@project) is equal to project (project)
                           if (root.identifier == @project.identifier)
                             link_to (h(root), {:controller => 'projects', :action => 'show', :id => root}, :class => 'selected')
                           else
@@ -128,11 +138,15 @@ module CollapseApplicationHelperPatch
             s << "</li>\n"
           end
           s << "<ul>\n"
+          # Iterate over the sub-projects
           projects[root].sort.each do |project|
+            # Skip if the project is a root-project
             next if project == root
             if jump_to_current_view_implemented == true
               s << "<li>" +
+                          # Only add ':jump => current_menu_item' URL-parameter if on project level
                           if !@project.nil?
+                            # Only add ':class => selected' URL-parameter if the current project (@project) is equal to project (project)
                             if (project.identifier == @project.identifier)
                               link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => 'selected')
                             else
@@ -144,7 +158,9 @@ module CollapseApplicationHelperPatch
               s << "</li>\n"
             else
               s << "<li>" +
+                          # Only add ':jump => current_menu_item' URL-parameter if on project level
                           if !@project.nil?
+                            # Only add ':class => selected' URL-parameter if the current project (@project) is equal to project (project)
                             if (project.identifier == @project.identifier)
                               link_to (h(project), {:controller => 'projects', :action => 'show', :id => project}, :class => 'selected')
                             else
@@ -155,12 +171,12 @@ module CollapseApplicationHelperPatch
                           end
               s << "</li>\n"
             end
-          end
-          s << "</ul>\n"
+          end          
+          s << "</ul>\n" # close the UL-element of the sub-projects iteration
         end
-        s << "</ul>\n"
+        s << "</ul>\n" # close the UL-element of the root-projects iteration
       end
-      s
+      return s
     end
     
     # Renders the global menu as an unordered list
