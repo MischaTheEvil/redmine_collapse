@@ -714,7 +714,12 @@ html>body #content {
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
   background-color:#333;
-  color:#B3B3B3;
+  color:#BFBFBF;
+}
+#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
+#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
+  background:#333;
+  color:#BFBFBF;
 }
 
 /***** The projects tab *****/
@@ -722,7 +727,7 @@ html>body #content {
     margin-left: -25px;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab ul li {
-    background: #111 url(/themes/squeejee/images/bottom_shine.png) 0px -40px repeat-x;
+    /*background: #111 url(/themes/squeejee/images/bottom_shine.png) 0px -40px repeat-x;*/
     border: solid 1px #333;
     border-width: 1px 1px 0px 0px;
 }
@@ -732,7 +737,7 @@ html>body #content {
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a {
     display: block;
     color: #8C8C8C;
-    background: #333;
+    /*background: #333;*/
     text-decoration: none;
     padding: 4px 10px 4px 0px;
     font-weight: bold;
@@ -741,12 +746,12 @@ html>body #content {
     border-color: #555;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a:hover {
-    background: #333;
+    /*background: #333;*/
     color: #B3B3B3;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a.selected,
 #main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a.selected:hover {
-    background: #333;
-    border-color: #444;
-    color: #B3B3B3;
+    /*background: #333;*/
+    /*border-color: #444;*/
+    color: #BFBFBF;
 }
