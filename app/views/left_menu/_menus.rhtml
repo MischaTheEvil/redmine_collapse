@@ -11,8 +11,5 @@
 
 <h4><%= l(:label_global_menu) %></h4>
 <div id="main-menu">
-    <ul>
-        <li><%= link_to_unless_current l(:label_issue_view_all), { :controller => 'issues', :id => nil } %></li>
-        <li><%= link_to_unless_current l(:label_overall_activity), { :controller => 'projects', :action => 'activity', :id => nil }%></li>
-    </ul>
+    <%= render_global_menu %>
 </div>

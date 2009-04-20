@@ -163,6 +163,33 @@ module CollapseApplicationHelperPatch
       s
     end
     
+    # Renders the global menu as an unordered list
+    # Returns a string containing the HTML for the global menu
+    def render_global_menu
+      s = ''
+        s << "<ul>\n"
+          # Global issues link
+          s << "<li>" +
+                      # Add 'alt-selected'-class to the 'a'-element if on global level (!= :controller == issues && != :action == index && != :project_id == nil)
+                      if params[:controller] == 'issues' && params[:action] == 'index' && params[:project_id] == nil
+                        link_to l(:label_issue_view_all), { :controller => 'issues', :id => nil }, :class => 'alt-selected'
+                      else
+                        link_to l(:label_issue_view_all), { :controller => 'issues', :id => nil }
+                      end
+          s << "</li>\n"
+          # Global activity link
+          s << "<li>" +
+                      # Add 'alt-selected'-class to the 'a'-element if on global level (!= :controller == projects && != :action == activity && != :id == nil)
+                      if params[:controller] == 'projects' && params[:action] == 'activity' && params[:id] == nil
+                        link_to l(:label_overall_activity), { :controller => 'projects', :action => 'activity', :id => nil }, :class => 'alt-selected'
+                      else
+                        link_to l(:label_overall_activity), { :controller => 'projects', :action => 'activity', :id => nil }
+                      end
+          s << "</li>\n"
+        s << "</ul>\n"
+      return s
+    end
+    
     # Left-menu tabs renderer
     # Returns an array named 'tabs' containing the left-menu tabs to render
     def left_menu_tabs
