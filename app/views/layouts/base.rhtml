@@ -30,7 +30,11 @@
         <%= render_menu :top_menu -%>
     </div>
     
-    <div id="header">
+    <% if Setting.plugin_redmine_collapse['show_menus_tab'] == '1' && Setting.plugin_redmine_collapse['show_projectmenu_in_menustab'] == '1' %>
+        <div id="header" class="withoutmainmenu">
+    <% else %>
+        <div id="header">
+    <% end %>
         <div id="quick-search">
             <% form_tag({:controller => 'search', :action => 'index', :id => @project}, :method => :get ) do %>
                 <%= link_to l(:label_search), {:controller => 'search', :action => 'index', :id => @project}, :accesskey => accesskey(:search) %>:

@@ -15,6 +15,11 @@ html>body #content {
     overflow: auto;
 }
 
+/***** Extending modified Redmine Core layout-selectors *****/
+#header.withoutmainmenu {
+    height: 3em;
+}
+
 /******************** DEFAULT THEME ********************/
 
 /*****
