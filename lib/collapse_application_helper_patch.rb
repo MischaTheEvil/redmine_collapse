@@ -60,10 +60,10 @@ module CollapseApplicationHelperPatch
     # Tab helpers
     ###
     
-    # Renders a tree of projects as a nested set of unordered lists
+    # Renders the projects as a nested set of unordered lists  (Redmine 0.9.x)
     # The given collection may be a subset of the whole project tree
     # (eg. some intermediate nodes are private and can not be seen)
-    def render_involved_projects_list(projects)
+    def render_projects_nestedset(projects)
       s = ''
       if projects.any?
         ancestors = []
@@ -80,12 +80,16 @@ module CollapseApplicationHelperPatch
           end
           classes = (ancestors.empty? ? 'root' : 'child')
           s << "<li>" +
-                       if !@project.nil?
-                link_to_if (project.identifier != @project.identifier), h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}
-                       else
-                link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
-			           end
-                ancestors << project
+                      if !@project.nil?
+                        if (project.identifier == @project.identifier)
+                          link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => 'selected')
+                        else
+                          link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item})
+                        end
+                      else
+                        link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
+                      end
+          ancestors << project
         end
         s << ("</li></ul>\n" * ancestors.size)
       end

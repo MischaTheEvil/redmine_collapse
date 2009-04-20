@@ -8,7 +8,7 @@
 
 <% if render_project_hierarchy_implemented == true %>
     <div id="projects-nested">
-        <%= render_involved_projects_list(user_projects) %>
+        <%= render_projects_nestedset(user_projects) %>
     </div>
 <% else %>
     <div id="projects-tree">
