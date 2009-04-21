@@ -30,7 +30,11 @@
         <%= render_menu :top_menu -%>
     </div>
     
-    <div id="header">
+    <% if Setting.plugin_redmine_collapse['show_menus_tab'] == '1' && Setting.plugin_redmine_collapse['show_projectmenu_in_menustab'] == '1' %>
+        <div id="header" class="withoutmainmenu">
+    <% else %>
+        <div id="header">
+    <% end %>
         <div id="quick-search">
             <% form_tag({:controller => 'search', :action => 'index', :id => @project}, :method => :get ) do %>
                 <%= link_to l(:label_search), {:controller => 'search', :action => 'index', :id => @project}, :accesskey => accesskey(:search) %>:
@@ -49,16 +53,18 @@
             <h1><%= h(@project && !@project.new_record? ? @project.name : Setting.app_title) %></h1>
         <% end %>
         
-        <div id="main-menu">
-            <%= render_main_menu(@project) %>
-        </div>
+        <% unless Setting.plugin_redmine_collapse['show_menus_tab'] == '1' && Setting.plugin_redmine_collapse['show_projectmenu_in_menustab'] == '1' %>
+            <div id="main-menu">
+                <%= render_main_menu(@project) %>
+            </div>
+        <% end %>
     </div>
     
     <%= tag('div', {:id => 'main', :class => 'nosidebar'}, true) %>
       <div id="leftmenu-<%= current_redmine_theme %>">
         <div id="leftmenu">
             <div id="leftmenu-contents">
-                <div style="width:200px">
+                <div style="width:210px">
                     <% tabs = left_menu_tabs %>
                     <% selected_tab = params[:tab] ? params[:tab].to_s : tabs.first[:name] %>
                     <% selected_tab = left_menu_selected_tab %>
