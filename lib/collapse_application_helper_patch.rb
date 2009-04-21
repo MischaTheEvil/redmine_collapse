@@ -256,11 +256,16 @@ module CollapseApplicationHelperPatch
     # Left-menu selected-tab based on active controller and activated-tabs settings
     # Returns a string containing the name of the selected tab
     def left_menu_selected_tab
-      # The controllers on which the projects-tab should be activated by default
+    # Initialize an array named "projecttab_controllers" containing the controllers on which the projects-tab should be activated by default
       projecttab_controllers = [ 'welcome', 'account', 'admin', 'users', 'roles', 'trackers', 'issue_statuses', 'workflows', 'custom_fields', 'enumerations', 'settings' ]
       
+      # Activate the projects-tab by default if the projects-tab is activated and the "projecttab_controllers"-array contains the current :controller-param
       if (Setting.plugin_redmine_collapse['show_projects_tab'] == '1' ) && (projecttab_controllers.include?(params[:controller]))
         selectedtab = 'projects-tab'
+      # Activate the menus-tab by default if the menus-tab is activated and the project-menu is shown in the menus-tab
+      elsif (Setting.plugin_redmine_collapse['show_menus_tab'] == '1') && (Setting.plugin_redmine_collapse['show_projectmenu_in_menustab'] == '1')
+        selectedtab = 'menus-tab'
+      # Else activate the actions-tab by default
       else
         selectedtab = 'actions-tab'
       end
