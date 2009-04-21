@@ -56,6 +56,16 @@ module CollapseApplicationHelperPatch
       end
     end
     
+    # Redmine Core trunk@r2493
+    # Returns true if the constant is defined, else it returns false
+    def rails_i18n_implemented
+      if Redmine.const_defined?(:I18n)
+        return true
+      else
+        return false
+      end
+    end
+    
     ###
     # Tab helpers
     ###
@@ -211,8 +221,7 @@ module CollapseApplicationHelperPatch
     def left_menu_tabs
       # Don't render the menus-tab nor the projects-tab unless specifically configured
       if Setting.plugin_redmine_collapse['show_menus_tab'] == '1' && Setting.plugin_redmine_collapse['show_projects_tab'] == '1'
-        # => Redmine trunk@r2493?
-        if Redmine.const_defined?(:I18n)
+        if rails_i18n_implemented == true
           tabs = [ { :name => 'actions-tab', :label => :label_actions_tab, :partial => 'left_menu/actions.rhtml' },
                    { :name => 'menus-tab', :label => :label_menus_tab, :partial => 'left_menu/menus.rhtml' },
                    { :name => 'projects-tab', :label => :label_projects_tab, :partial => 'left_menu/projects.rhtml' } ]
@@ -223,8 +232,7 @@ module CollapseApplicationHelperPatch
         end
       # Don't render the menus-tab unless specifically configured
       elsif Setting.plugin_redmine_collapse['show_menus_tab'] == '1'
-        # => Redmine trunk@r2493?
-        if Redmine.const_defined?(:I18n)
+        if rails_i18n_implemented == true
           tabs = [ { :name => 'actions-tab', :label => :label_actions_tab, :partial => 'left_menu/actions.rhtml' },
                    { :name => 'menus-tab', :label => :label_menus_tab, :partial => 'left_menu/menus.rhtml' } ]
         else
@@ -233,8 +241,7 @@ module CollapseApplicationHelperPatch
         end
       # Don't render the projects-tab unless specifically configured
       elsif Setting.plugin_redmine_collapse['show_projects_tab'] == '1'
-        # => Redmine trunk@r2493?
-        if Redmine.const_defined?(:I18n)
+        if rails_i18n_implemented == true
           tabs = [ { :name => 'actions-tab', :label => :label_actions_tab, :partial => 'left_menu/actions.rhtml' },
                    { :name => 'projects-tab', :label => :label_projects_tab, :partial => 'left_menu/projects.rhtml' } ]
         else
@@ -243,8 +250,7 @@ module CollapseApplicationHelperPatch
         end
       # Always render the actions-tab
       else
-        # => Redmine trunk@r2493?
-        if Redmine.const_defined?(:I18n)
+        if rails_i18n_implemented == true
           tabs = [ { :name => 'actions-tab', :label => :label_actions_tab, :partial => 'left_menu/actions.rhtml' } ]
         else
           tabs = [ { :name => 'actions-tab', :label => l(:label_actions_tab), :partial => 'left_menu/actions.rhtml' } ]
