@@ -39,7 +39,7 @@ html>body #content {
 #main #leftmenu-default #leftmenu #leftmenu-border {
     position: absolute;
     right: -5px;
-    top: 35px;
+    top: 2.95em;
     height: 95%;
     width: 5px;
     background-image: url(../images/border_collapse.gif);
@@ -628,7 +628,7 @@ html>body #content {
 #main #leftmenu-squeejee #leftmenu #leftmenu-border {
     position: absolute;
     right: -5px;
-    top: 38px;
+    top: 2.88em;
     height: 95%;
     width: 5px;
     background-image: url(../images/border_collapse.gif);
