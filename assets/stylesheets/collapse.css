@@ -185,7 +185,7 @@ html>body #content {
 #main #leftmenu-alternate #leftmenu #leftmenu-border {
     position: absolute;
     right: -5px;
-    top: 23px;
+    top: 1.93em;
     height: 95%;
     width: 5px;
     background-image: url(../images/border_collapse.gif);
