@@ -332,7 +332,7 @@ html>body #content {
 #main #leftmenu-classic #leftmenu #leftmenu-border {
     position: absolute;
     right: -5px;
-    top: 31px;
+    top: 2.95em;
     height: 95%;
     width: 5px;
     background-image: url(../images/border_collapse.gif);
