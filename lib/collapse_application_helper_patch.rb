@@ -299,5 +299,3 @@ module CollapseApplicationHelperPatch
     
   end
 end
-
-ApplicationHelper.send(:include, CollapseApplicationHelperPatch)

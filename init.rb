@@ -1,7 +1,11 @@
 require 'redmine'
 
 # Patches to the Redmine core.
+require 'dispatcher'
 require 'collapse_application_helper_patch'
+Dispatcher.to_prepare do
+  ApplicationHelper.send(:include, CollapseApplicationHelperPatch)
+end
 
 RAILS_DEFAULT_LOGGER.info 'Starting Collapse plugin for Redmine'
 
