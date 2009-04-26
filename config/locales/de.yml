@@ -1,13 +1,13 @@
 de:
   label_actions_tab: Aktionen
-  label_menus_tab: Menüs
+  label_menus_tab: MenÃ¼s
   label_projects_tab: Projekte
-  label_global_menu: Global menü
-  label_project_menu: Projekt menü
+  label_global_menu: Global menÃ¼
+  label_project_menu: Projekt menÃ¼
   setting_collapse_position: Sidebar position
   setting_collapse_showprojectstab: Zeige projekte
-  setting_collapse_showmenustab: Zeige den menü-reiter
-  setting_collapse_showprojectmenuinmenustab: Projekt menü im menü-reiter anzeigen
+  setting_collapse_showmenustab: Zeige den menÃ¼-reiter
+  setting_collapse_showprojectmenuinmenustab: Projekt menÃ¼ im menÃ¼-reiter anzeigen
   setting_collapse_hideprojectselector: Verstecke die haupt-projekte auswahl
   label_collapse_left: Links
   label_collapse_right: Rechts
