@@ -189,84 +189,62 @@ module CollapseApplicationHelperPatch
       return s
     end
     
+    # Renders the CSS-style used for selected global menu items
+    # Returns a string containing the CSS-style name or nil
+    def global_menu_item_class(selected=false)
+      if selected
+        'alt-selected'
+      else
+        ''
+      end
+    end
+    
     # Renders the global menu as an unordered list (relies on backwards-compatibility in the core for the RESTful-routes of Redmine 0.9.x)
-    # Returns a string containing the HTML for the global menu
+    # Returns an array named 'globalmenu' containing the HTML for the global menu
     def render_global_menu
-      s = ''
-        s << "<ul>\n"
-         
-          # Global issues link
-          s << "<li>" +
-                      # Add 'alt-selected'-class to the 'a'-element if on global level (!= :controller == issues && != :action == index && != :project_id == nil)
-                      if params[:controller] == 'issues' && params[:action] == 'index' && params[:project_id] == nil
-                        link_to l(:label_issue_plural), { :controller => 'issues', :id => nil }, :class => 'alt-selected'
-                      else
-                        link_to l(:label_issue_plural), { :controller => 'issues', :id => nil }
-                      end
-          s << "</li>\n"
-          
-          # Global activity link
-          s << "<li>" +
-                      # Add 'alt-selected'-class to the 'a'-element if on global level (!= :controller == projects && != :action == activity && != :id == nil)
-                      if params[:controller] == 'projects' && params[:action] == 'activity' && params[:id] == nil
-                        link_to l(:label_activity), { :controller => 'projects', :action => 'activity', :id => nil }, :class => 'alt-selected'
-                      else
-                        link_to l(:label_activity), { :controller => 'projects', :action => 'activity', :id => nil }
-                      end
-          s << "</li>\n"
-          
-          # Global calendar link
-          s << "<li>"
-                      # Add 'alt-selected'-class to the 'a'-element if on global level (!= :controller == issues && != :action == calendar && != :project_id == nil)
-                      if params[:controller] == 'issues' && params[:action] == 'calendar' && params[:project_id] == nil
-                        s << link_to(l(:label_calendar), { :controller => 'issues', :action => 'calendar', :project_id => nil }, :class => 'alt-selected') if User.current.allowed_to?(:view_calendar, @project, :global => true)
-                      else
-                        s << link_to(l(:label_calendar), { :controller => 'issues', :action => 'calendar', :project_id => nil }) if User.current.allowed_to?(:view_calendar, @project, :global => true)
-                      end
-          s << "</li>\n"
-          
-          # Global gantt link
-          s << "<li>"
-                      # Add 'alt-selected'-class to the 'a'-element if on global level (!= :controller == issues && != :action == gantt && != :project_id == nil)
-                      if params[:controller] == 'issues' && params[:action] == 'gantt' && params[:project_id] == nil
-                        s << link_to(l(:label_gantt), { :controller => 'issues', :action => 'gantt', :project_id => nil }, :class => 'alt-selected') if User.current.allowed_to?(:view_gantt, @project, :global => true)
-                      else
-                        s << link_to(l(:label_gantt), { :controller => 'issues', :action => 'gantt', :project_id => nil }) if User.current.allowed_to?(:view_gantt, @project, :global => true)
-                      end
-          s << "</li>\n"
-          
-          # Global spent-time details link
-          s << "<li>"
-                      # Add 'alt-selected'-class to the 'a'-element if on global level (!= :controller == timelog && != :action == details && != :project_id == nil)
-                      if params[:controller] == 'timelog' && params[:action] == 'details' && params[:project_id] == nil
-                        s << link_to(l(:label_spenttime_details), { :controller => 'timelog', :action => 'details', :project_id => nil }, :class => 'alt-selected') if User.current.allowed_to?(:view_time_entries, @project, :global => true)
-                      else
-                        s << link_to(l(:label_spenttime_details), { :controller => 'timelog', :action => 'details', :project_id => nil }) if User.current.allowed_to?(:view_time_entries, @project, :global => true)
-                      end
-          s << "</li>\n"
-          
-          # Global spent-time report link
-          s << "<li>"
-                      # Add 'alt-selected'-class to the 'a'-element if on global level (!= :controller == timelog && != :action == report && != :project_id == nil)
-                      if params[:controller] == 'timelog' && params[:action] == 'report' && params[:project_id] == nil
-                        s << link_to(l(:label_spenttime_report), { :controller => 'timelog', :action => 'report', :project_id => nil }, :class => 'alt-selected') if User.current.allowed_to?(:view_time_entries, @project, :global => true)
-                      else
-                        s << link_to(l(:label_spenttime_report), { :controller => 'timelog', :action => 'report', :project_id => nil }) if User.current.allowed_to?(:view_time_entries, @project, :global => true)
-                      end
-          s << "</li>\n"
-          
-          # Global news link
-          s << "<li>"
-                      # Add 'alt-selected'-class to the 'a'-element if on global level (!= :controller == news && != :action == index && != :project_id == nil)
-                      if params[:controller] == 'news' && params[:action] == 'index' && params[:project_id] == nil
-                        s << link_to(l(:label_news), { :controller => 'news', :action => 'index', :project_id => nil }, :class => 'alt-selected') if User.current.allowed_to?(:view_news, @project, :global => true)
-                      else
-                        s << link_to(l(:label_news), { :controller => 'news', :action => 'index', :project_id => nil }) if User.current.allowed_to?(:view_news, @project, :global => true)
-                      end
-          s << "</li>\n"
-          
-        s << "</ul>\n"
-      return s
+      returning '' do |globalmenu|
+        globalmenu << "<ul>\n"
+        
+        # Global issues link
+        issues_selected = params[:controller] == 'issues' && params[:action] == 'index' && params[:project_id].nil?
+        globalmenu << content_tag(:li, link_to(l(:label_issue_plural), { :controller => 'issues', :id => nil }, :class => global_menu_item_class(issues_selected)))
+        
+        # Global activity link
+        activity_selected = params[:controller] == 'projects' && params[:action] == 'activity' && params[:id].nil?
+        globalmenu << content_tag(:li, link_to(l(:label_activity), { :controller => 'projects', :action => 'activity', :id => nil }, :class => global_menu_item_class(activity_selected)))
+        
+        # Global calendar link
+        if User.current.allowed_to?(:view_calendar, @project, :global => true)
+          calendar_selected = params[:controller] == 'issues' && params[:action] == 'calendar' && params[:project_id].nil?
+          globalmenu << content_tag(:li, link_to(l(:label_calendar), { :controller => 'issues', :action => 'calendar', :project_id => nil }, :class => global_menu_item_class(calendar_selected)))
+        end
+        
+        # Global gantt link
+        if User.current.allowed_to?(:view_gantt, @project, :global => true)
+          gantt_selected = params[:controller] == 'issues' && params[:action] == 'gantt' && params[:project_id].nil?
+          globalmenu << content_tag(:li, link_to(l(:label_gantt), { :controller => 'issues', :action => 'gantt', :project_id => nil }, :class => global_menu_item_class(gantt_selected)))
+        end
+        
+        # Global spent-time details link
+        if User.current.allowed_to?(:view_time_entries, @project, :global => true)
+          spent_time_details_selected = params[:controller] == 'timelog' && params[:action] == 'details' && params[:project_id] == nil
+          globalmenu << content_tag(:li, link_to(l(:label_spenttime_details), { :controller => 'timelog', :action => 'details', :project_id => nil }, :class => global_menu_item_class(spent_time_details_selected)))
+        end
+        
+        # Global spent-time report link
+        if User.current.allowed_to?(:view_time_entries, @project, :global => true)
+          spent_time_report_selected = params[:controller] == 'timelog' && params[:action] == 'report' && params[:project_id] == nil
+          globalmenu << content_tag(:li, link_to(l(:label_spenttime_report), { :controller => 'timelog', :action => 'report', :project_id => nil }, :class => global_menu_item_class(spent_time_report_selected)))
+        end
+        
+        # Global news link
+        if User.current.allowed_to?(:view_news, @project, :global => true)
+          news_selected = params[:controller] == 'news' && params[:action] == 'index' && params[:project_id] == nil
+          globalmenu << content_tag(:li, link_to(l(:label_news), { :controller => 'news', :action => 'index', :project_id => nil }, :class => global_menu_item_class(news_selected)))
+        end
+        
+        globalmenu << "</ul>\n"
+      end
     end
     
     # Left-menu tabs renderer
