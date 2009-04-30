@@ -310,20 +310,21 @@ module CollapseApplicationHelperPatch
     end
     
     # Currently used Redmine Theme based on the global setting
-    # Returns a string containing the name of the current theme
+    # Returns a string named 'currenttheme' containing the name of the current theme
     def current_redmine_theme
-      if (Setting.ui_theme == '')
-        currenttheme = 'default'
-      elsif (Setting.ui_theme == 'alternate')
-        currenttheme = 'alternate'
-      elsif (Setting.ui_theme == 'classic')
-        currenttheme = 'classic'
-      elsif (Setting.ui_theme == 'basecamp')
-        currenttheme = 'basecamp'
-      elsif (Setting.ui_theme == 'squeejee')
-        currenttheme = 'squeejee'
-      else
-        currenttheme = 'default'
+      case Setting.ui_theme
+        when ''
+          currenttheme = 'default'
+        when 'alternate'
+          currenttheme = 'alternate'
+        when 'classic'
+          currenttheme = 'classic'
+        when 'basecamp'
+          currenttheme = 'basecamp'
+        when 'squeejee'
+          currenttheme = 'squeejee'
+        else
+          currenttheme = 'default'
       end
       return currenttheme
     end
