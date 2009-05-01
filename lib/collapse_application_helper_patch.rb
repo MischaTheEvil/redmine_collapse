@@ -217,19 +217,19 @@ module CollapseApplicationHelperPatch
         
         # Global spent-time details link
         if User.current.allowed_to?(:view_time_entries, @project, :global => true)
-          spent_time_details_selected = params[:controller] == 'timelog' && params[:action] == 'details' && params[:project_id] == nil
+          spent_time_details_selected = params[:controller] == 'timelog' && params[:action] == 'details' && params[:project_id].nil?
           globalmenu << content_tag(:li, link_to(l(:label_spenttime_details), { :controller => 'timelog', :action => 'details', :project_id => nil }, :class => global_menu_item_class(spent_time_details_selected)))
         end
         
         # Global spent-time report link
         if User.current.allowed_to?(:view_time_entries, @project, :global => true)
-          spent_time_report_selected = params[:controller] == 'timelog' && params[:action] == 'report' && params[:project_id] == nil
+          spent_time_report_selected = params[:controller] == 'timelog' && params[:action] == 'report' && params[:project_id].nil?
           globalmenu << content_tag(:li, link_to(l(:label_spenttime_report), { :controller => 'timelog', :action => 'report', :project_id => nil }, :class => global_menu_item_class(spent_time_report_selected)))
         end
         
         # Global news link
         if User.current.allowed_to?(:view_news, @project, :global => true)
-          news_selected = params[:controller] == 'news' && params[:action] == 'index' && params[:project_id] == nil
+          news_selected = params[:controller] == 'news' && params[:action] == 'index' && params[:project_id].nil?
           globalmenu << content_tag(:li, link_to(l(:label_news), { :controller => 'news', :action => 'index', :project_id => nil }, :class => global_menu_item_class(news_selected)))
         end
         
