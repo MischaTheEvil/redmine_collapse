@@ -70,6 +70,16 @@ module CollapseApplicationHelperPatch
     # Tab helpers
     ###
     
+    # Renders the CSS-style used for selected project menu items
+    # Returns a string containing the CSS-style name or nil
+    def project_menu_item_class(selected=false)
+      if selected
+        'selected'
+      else
+        ''
+      end
+    end
+    
     # Renders the projects as a nested set of unordered lists  (Redmine 0.9.x)
     # The given collection may be a subset of the whole project tree
     # (eg. some intermediate nodes are private and can not be seen)
@@ -94,12 +104,8 @@ module CollapseApplicationHelperPatch
           s << "<li>" +
                       # Only add ':jump => current_menu_item' URL-parameter if on project level
                       if !@project.nil?
-                        # Only add ':class => selected' URL-parameter if the current project (@project) is equal to project (project)
-                        if (project.identifier == @project.identifier)
-                          link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => 'selected')
-                        else
-                          link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item})
-                        end
+                        project_selected = project.identifier == @project.identifier
+                        link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
                       else
                         link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
                       end
@@ -122,12 +128,8 @@ module CollapseApplicationHelperPatch
             s << "<li>" +
                         # Only add ':jump => current_menu_item' URL-parameter if on project level
                         if !@project.nil?
-                          # Only add ':class => selected' URL-parameter if the current project (@project) is equal to project (project)
-                          if (root.identifier == @project.identifier)
-                            link_to (h(root), {:controller => 'projects', :action => 'show', :id => root, :jump => current_menu_item}, :class => 'selected')
-                          else
-                            link_to (h(root), {:controller => 'projects', :action => 'show', :id => root, :jump => current_menu_item})
-                          end
+                          project_selected = root.identifier == @project.identifier
+                          link_to (h(root), {:controller => 'projects', :action => 'show', :id => root, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
                         else
                           link_to (h(root), {:controller => 'projects', :action => 'show', :id => root})
                         end
@@ -136,12 +138,8 @@ module CollapseApplicationHelperPatch
             s << "<li>" +
                         # Only add ':jump => current_menu_item' URL-parameter if on project level
                         if !@project.nil?
-                          # Only add ':class => selected' URL-parameter if the current project (@project) is equal to project (project)
-                          if (root.identifier == @project.identifier)
-                            link_to (h(root), {:controller => 'projects', :action => 'show', :id => root}, :class => 'selected')
-                          else
-                            link_to (h(root), {:controller => 'projects', :action => 'show', :id => root})
-                          end
+                          project_selected = root.identifier == @project.identifier
+                          link_to (h(root), {:controller => 'projects', :action => 'show', :id => root}, :class => project_menu_item_class(project_selected))
                         else
                           link_to (h(root), {:controller => 'projects', :action => 'show', :id => root})
                         end
@@ -156,12 +154,8 @@ module CollapseApplicationHelperPatch
               s << "<li>" +
                           # Only add ':jump => current_menu_item' URL-parameter if on project level
                           if !@project.nil?
-                            # Only add ':class => selected' URL-parameter if the current project (@project) is equal to project (project)
-                            if (project.identifier == @project.identifier)
-                              link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => 'selected')
-                            else
-                              link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item})
-                            end
+                            project_selected = project.identifier == @project.identifier
+                            link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
                           else
                             link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
                           end
@@ -170,12 +164,8 @@ module CollapseApplicationHelperPatch
               s << "<li>" +
                           # Only add ':jump => current_menu_item' URL-parameter if on project level
                           if !@project.nil?
-                            # Only add ':class => selected' URL-parameter if the current project (@project) is equal to project (project)
-                            if (project.identifier == @project.identifier)
-                              link_to (h(project), {:controller => 'projects', :action => 'show', :id => project}, :class => 'selected')
-                            else
-                              link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
-                            end
+                            project_selected = project.identifier == @project.identifier
+                            link_to (h(project), {:controller => 'projects', :action => 'show', :id => project}, :class => project_menu_item_class(project_selected))
                           else
                             link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
                           end
