@@ -205,13 +205,13 @@ module CollapseApplicationHelperPatch
       returning '' do |globalmenu|
         globalmenu << "<ul>\n"
         
-        # Global issues link
-        issues_selected = params[:controller] == 'issues' && params[:action] == 'index' && params[:project_id].nil?
-        globalmenu << content_tag(:li, link_to(l(:label_issue_plural), { :controller => 'issues', :id => nil }, :class => global_menu_item_class(issues_selected)))
-        
         # Global activity link
         activity_selected = params[:controller] == 'projects' && params[:action] == 'activity' && params[:id].nil?
         globalmenu << content_tag(:li, link_to(l(:label_activity), { :controller => 'projects', :action => 'activity', :id => nil }, :class => global_menu_item_class(activity_selected)))
+        
+        # Global issues link
+        issues_selected = params[:controller] == 'issues' && params[:action] == 'index' && params[:project_id].nil?
+        globalmenu << content_tag(:li, link_to(l(:label_issue_plural), { :controller => 'issues', :id => nil }, :class => global_menu_item_class(issues_selected)))
         
         # Global calendar link
         if User.current.allowed_to?(:view_calendar, @project, :global => true)
