@@ -107,7 +107,8 @@ html>body #content {
 }
 
 /***** The actions tab *****/
-#main #leftmenu-default #leftmenu #tab-content-actions-tab {
+#main #leftmenu-default #leftmenu #tab-content-actions-tab h3 {
+    margin-top: 15px;
 }
 
 /***** The menus tab *****/
@@ -253,7 +254,8 @@ html>body #content {
 }
 
 /***** The actions tab *****/
-#main #leftmenu-alternate #leftmenu #tab-content-actions-tab {
+#main #leftmenu-alternate #leftmenu #tab-content-actions-tab h3 {
+    margin-top: 15px;
 }
 
 /***** The menus tab *****/
@@ -400,7 +402,8 @@ html>body #content {
 }
 
 /***** The actions tab *****/
-#main #leftmenu-classic #leftmenu #tab-content-actions-tab {
+#main #leftmenu-classic #leftmenu #tab-content-actions-tab h3 {
+    margin-top: 15px;
 }
 
 /***** The menus tab *****/
@@ -548,7 +551,8 @@ html>body #content {
 }
 
 /***** The actions tab *****/
-#main #leftmenu-basecamp #leftmenu #tab-content-actions-tab {
+#main #leftmenu-basecamp #leftmenu #tab-content-actions-tab h3 {
+    margin-top: 15px;
 }
 
 /***** The menus tab *****/
