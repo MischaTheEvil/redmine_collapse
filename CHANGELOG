@@ -1,0 +1,35 @@
+0.2.0 (03-05-2009)
+    * Defect #202: Naming collision on admin > settings > projects; settingstab 'projects' not rendered
+    * Defect #204: Faulty project-selection on projects-tab after merge of nested-projects branch to trunk
+    * Defect #237: Make it (backwards-)compatible with recent i18n changes in Redmine Core
+    * Defect #238: Using IE7 the first letters of the project names are dropped in the projects-tab
+    * Defect #241: Subprojects in projects-tab are missing the project-id in their URLs when jump_to_current_view_implemented == true
+    * Defect #246: Fix encoding of i18n files
+    * Defect #251: Fix the positioning of the collapsible sidebar delimiter-image by converting px into em
+    * Enhancement #185: Optimize controller-detection code for selected-tab
+    * Enhancement #239: Refactor the CSS styling-mechanism to provide theme-respecting styles for the collapsible sidebar
+    * Enhancement #244: Migrate legacy (<0.9[dev]) project-retrieval code from view to CollapseApplicationHelperPatch-library method
+    * Enhancement #247: Add compatibility validation for Rails-i18n implemented?
+    * Enhancement #252: Change the Redmine Core patch to use the Rails dispatcher
+    * Enhancement #252: Change the Redmine Core patch to use the Rails dispatcher
+    * Enhancement #254: Improve the overall code-quality (make it more Ruby-ish)
+    * Feature #180: Add new configurable menus tab
+    * Feature #253: Add more global links to the menus tab
+    * Task-HITDM #222: [Patch] German translation
+    * Task-HITDM #240: Sync the base-layout with the vendor's bleeding-edge source (trunk)
+    * Task-HITDM #245: Enhance the projects tab styling to match the styling of the menus tab
+    * Task-HITDM #248: Code-cleanup and commenting
+
+0.1.0 (07-01-2009)
+    * Feature #176: Add method to CollapseApplicationHelperPatch:: which returns if redirect_to_project_menu_item is defined
+    * Feature #182: Add method to CollapseApplicationHelperPatch:: which returns if render_flash_messages is defined
+    * Enhancement #175: Document the collapse helper-methods
+    * Enhancement #177: Projects-tab links should include parameter ":jump => current_menu_item"
+    * Enhancement #179: Refactor the inclusion-mechanism of the helper-methods into class 'ApplicationHelper'
+    * Enhancement #183: Obviation of change in flash-message rendering in base-layout in Redmine 0.8.1
+    * Enhancement #184: Move logics for selected-tab from base-view to helper-method
+    * Task-HITDM #173: Add/edit documentation
+    * Task-HITDM #174: Add/edit licensing-info
+
+0.0.0 (as of 01-11-2008)
+    Initial sources by Sebastian Kurfürst as core patches for the Typo3 Redmine instance.
