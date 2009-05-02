@@ -761,6 +761,7 @@ html>body #content {
     display: block;
     color: #8C8C8C;
     text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     padding: 4px 10px 4px 0px;
     font-weight: bold;
 }
