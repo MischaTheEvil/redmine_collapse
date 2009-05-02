@@ -714,6 +714,9 @@ html>body #content {
 #main #leftmenu-squeejee #leftmenu #tab-content-actions-tab a {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
+#main #leftmenu-squeejee #leftmenu #tab-content-actions-tab h3 {
+    margin-top: 15px;
+}
 
 /***** The menus tab *****/
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu {
