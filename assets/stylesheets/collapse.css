@@ -711,7 +711,8 @@ html>body #content {
 }
 
 /***** The actions tab *****/
-#main #leftmenu-squeejee #leftmenu #tab-content-actions-tab {
+#main #leftmenu-squeejee #leftmenu #tab-content-actions-tab a {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 
 /***** The menus tab *****/
