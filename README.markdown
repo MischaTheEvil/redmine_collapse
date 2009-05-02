@@ -1,67 +1,162 @@
-# Redmine Collapse plugin
+=Redmine Collapse plugin
 
-A plugin to transform the default Redmine sidebar into a collapsible sidebar on the left side.
+A plugin to transform the default Redmine sidebar into a collapsible sidebar on the left side also providing some additional tabs containing project- and menu-links.
 
-## Features
+==Features
 
+Besides that the plugin overrides Redmine Core's base-layout, it also provides the following features:
 * Replaces the Redmine core's sidebar
-  * The provided sidebar is collapsible using JavaScript-helpers
-  * The default sidebar-content is available on the default Actions-tab
-  * An optional Projects-tab provides (nested) project-links of projects for which the current user has a role
-    * on Redmine 0.8.0 project-links are pointing to project overviews
-    * on Redmine 0.8.1 project-links are pointing to the currently-watched views in the selected project (if available)
+  * The provided sidebar is made collapsible using JavaScript-helpers
+  * The default sidebar-content is made available on the default "Actions"-tab
+* A first, optional tab named "Projects" provides (nested) project-links of projects for which the current user has a role
+  * on Redmine 0.8.0 project-links are pointing to project overviews
+  * on Redmine 0.8.1 and up project-links are pointing to the currently-watched menu-item in the selected project (if available)
 * Optionally, the core's project-selector drop-down menu can be hidden
-* Used strings can be centrally translated to every language (currently only English and Dutch are translated, for others stubs are provided)
+* A second, optional tab named "Menus" provides links to all global (cross-project) views and reports
+  * optionally, the default project-menu (by default placed horizontally below the header) can be "moved" to the menus tab
+* Used strings can be centrally translated to every language (currently only English, Dutch and German are translated, for others stubs are provided)
+* 100% compatible with all the core-themes (default, alternate & classic) and the currently supported and registered community-themes (basecamp and squeejee)
 
-## Compatibility
+==Compatibility
 
-This plugin is compatible with the Redmine 0.8-Stable branch.
+===Redmine compatibility
 
-## Installation
+This plugin is compatible with the Redmine 0.8-stable branch (thus including releases: 0.8.0, 0.8.1, 0.8.2 and 0.8.3) and the trunk upto (at least) r2700.
 
-1. Download the plugin using the latest archive file from [http://www.evil-dev.net][1].
-2. Install the plugin as described at [http://www.redmine.org/wiki/redmine/Plugins][2] (this plugin doesn't require migration).
-3. Login to your Redmine
+===Browser compatibility
 
-## Configuration
+* This plugin is fully compatible on the current, big-four of browser(-engines):
+  * Gecko (Mozilla)
+  * Trident (Internet Explorer 8)
+  * Presto (Opera)
+  * WebKit (Safari/Chrome)
 
-This plugin can be configured under Administration -> Plugins -> Redmine Collapse plugin -> Configure. It provides the following implemented settings:
-* Show the projects tab (default: yes)
-* Hide the core project selector (default: no)
+* This plugin is fully compatible after applying a manual CSS-change for certain themes) on the following browser(-engine):
+  * Trident (Internet Explorer 7)
 
-## Upgrade
+==Obtaining the plugin
 
-1. Download the latest archive file from [http://www.evil-dev.net][1]
-2. Unzip the file to your Redmine into the vendor/plugins directory
+The plugin can be downloaded as a packaged release from:
+* this page; the archive is attached
+* this MediaFire-mirror: http://www.mediafire.com/evildev
+* the upcoming website: http://www.evil-dev.net
+
+==Installation
+
+1. Download the plugin either using one of the described ways from "Obtaining the plugin"
+2. Install the plugin as described at http://www.redmine.org/wiki/redmine/Plugins (this plugin does not require a plugin database migration)
+3. Login to your Redmine as an Administrator
+4. Initially configure the plugin-settings
+
+==Configuration
+
+This plugin can be configured under Administration -> Plugins -> Redmine Collapse plugin -> Configure. It provides the following settings:
+* Show the projects tab (default: checked)
+* Hide the core project selector (default: unchecked)
+* Show the menus tab (default: unchecked)
+  * Show the project menu in the menus tab (default: unchecked, only configurable when "Show the menus tab" is checked)
+* Sidebar position (default: Left, though functionality isn't implemented [yet])
+
+==Workaround for Internet Explorer 7
+
+Due to the fact that Microsoft Internet Explorer 7 doesn't fully support the inherit-value (which is defined by CSS 2.1) a manual modification of a CSS-declaration is required when using either the default or the classic theme (or every other theme which sets an incorrect +background-color+ on +#main+). You need to hard-code the wanted enumeration of the inherit-value by changing the following snippet in _../assets/stylesheets/collapse.css_:
+
+from:
+
+<tt>
+/***** Overloading Redmine Core layout-selectors *****/
+#main {
+    background-color: inherit; /* not in IE7 */
+    padding: 2px 0px 0px 14px;
+}
+</tt>
+
+to:
+
+<tt>
+/***** Overloading Redmine Core layout-selectors *****/
+#main {
+    background-color: #FFFFFF; /* hard-code white (#FFFFFF) for IE7 with either the default- or the classic-theme */
+    padding: 2px 0px 0px 14px;
+}</tt>
+
+==Upgrade
+
+1. Download the plugin's latest archive file either using one of the described ways from "Obtaining the plugin"
+2. Unzip the file to your Redmine into the _../vendor/plugins_ directory
 3. Restart your Redmine
 
-## Uninstall
+==Uninstall
 
-1. Remove the directory "redmine_collapse" from the plugin-directory "../vendor/plugins".
+1. Remove the directory +redmine_collapse+ from the plugin-directory _../vendor/plugins_
 2. Restart Redmine.
 
-Make sure that no plugin-assets remain available in "../public/plugin_assets/redmine_collapse".
+Make sure that no plugin-assets remain available in _../public/plugin_assets/redmine_collapse_.
 
-## Credits
+==Changelog
+
+This is a limited selection of the changes made to the plugin. For the complete changelog see the _../CHANGELOG_-file in the plugin directory.
+
+===. 0.2.0 (03-05-2009)
+
+Second release providing some major new features, fixes for reported bugs plus providing compatibility with current Redmine versions and Redmine themes:
+
+* Defect:  Naming collision on admin > settings > projects; settingstab 'projects' not rendered
+* Defect:  Faulty project-selection on projects-tab after merge of nested-projects branch to trunk
+* Defect:  Make it (backwards-)compatible with recent i18n changes in Redmine Core
+* Defect:  Using IE7 the first letters of the project names are dropped in the projects-tab
+* Defect:  Subprojects in projects-tab are missing the project-id in their URLs when jump_to_current_view_implemented == true
+* Defect:  Fix encoding of i18n files
+* Defect:  Fix the positioning of the collapsible sidebar delimiter-image by converting px into em for cross-browser compatibility
+* Enhancement:  Optimize controller-detection code for selected-tab
+* Enhancement:  Refactor the CSS styling-mechanism to provide theme-respecting styles for the collapsible sidebar
+* Enhancement:  Migrate legacy (<0.9[dev]) project-retrieval code from view to CollapseApplicationHelperPatch-library method
+* Enhancement:  Add compatibility validation for Rails-i18n implemented?
+* Enhancement:  Change the Redmine Core patch to use the Rails dispatcher
+* Feature:  Add new configurable menus tab
+* Feature:  Add (more) global links to the menus tab
+* Task-HITDM:  [Patch] German translation for 0.1.0
+* Task-HITDM:  Sync the base-layout with the vendor's bleeding-edge source (trunk)
+* Task-HITDM:  Enhance the projects tab styling to match the styling of the menus tab
+
+===. 0.1.0 (07-01-2009)
+
+Initial version developed as a single Redmine plugin. Some major-issues were closed with this release:
+
+* Feature:  Add method to CollapseApplicationHelperPatch:: which returns if redirect_to_project_menu_item is defined
+* Feature:  Add method to CollapseApplicationHelperPatch:: which returns if render_flash_messages is defined
+* Enhancement:  Projects-tab links should include parameter ":jump => current_menu_item"
+* Enhancement:  Refactor the inclusion-mechanism of the helper-methods into class 'ApplicationHelper'
+* Enhancement:  Obviation of change in flash-message rendering in base-layout in Redmine 0.8.1
+* Enhancement:  Move logics for selected-tab from base-view to helper-method
+
+===. 0.0.0 (as of 01-11-2008)
+
+* Initial sources by Sebastian Kurfürst as core-hack patches for the Typo3 Redmine instance.
+
+==Credits
 
 Thanks goes out to the following people:
 
-* Eric Davis, Little Stream Software (http://www.littlestreamsoftware.com)
-** Provided skeleton for Redmine core patches (see lib/collapse_application_helper_patch.rb)
-* Sebastian Kurfürst, Typo3 Development Team (http://www.typo3.org)
-** Author of the Redmine core hacks, to implement this feature for Typo3-Forge, used as a base for this plugin
-* Lalit Patel, (http://www.lalit.org)
-** Provided Javascript code to store data as JSON-strings in cookies (initially used by Sebastian)
+===Code-credits
 
-## License
+* Eric Davis, Little Stream Software (http://www.littlestreamsoftware.com)
+  * Provided skeleton for Redmine core patches (see _../lib/collapse_application_helper_patch.rb_)
+  * Helped a lot making the overall plugin-source more Ruby-ish
+* Sebastian Kurfürst, Typo3 Development Team (http://www.typo3.org)
+  * Author of the Redmine core hacks, to implement this feature for Typo3-Forge, used as a base for this plugin
+* Lalit Patel, (http://www.lalit.org)
+  * Provided Javascript code to store data as JSON-strings in cookies (initially used by Sebastian)
+
+===Translation-credits
+
+* German: Andreas Schnederle-Wagner (http://www.Futureweb.at)
+
+==Licensing
 
 This plugin is licensed under the GNU GPL v2. See LICENSE.txt and GPL.txt for details.
 
-## Project help
+==Support
 
 If you need help, would like to report a bug or request a new feature you can contact the 
-maintainer at his [website][1]
-
-
-[1]: http://www.evil-dev.net
-[2]: http://www.redmine.org/wiki/redmine/Plugins
+maintainer via mail (mischa_the_evil [AT] hotmail [DOT] com) or at his (upcoming) website: http://www.evil-dev.net.
