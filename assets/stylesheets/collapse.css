@@ -476,6 +476,7 @@ html>body #content {
     min-height: 600px;
     padding: 0;
     position: relative;
+    margin-left: -14px;
     margin-right: 15px;
 }
 
