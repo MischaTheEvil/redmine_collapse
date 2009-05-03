@@ -115,24 +115,27 @@ module CollapseApplicationHelperPatch
     ###
     # Tab design helpers
     ###
+
+    # List of themes that are supported by the collapse plugin.
+    # Others will use the 'default' collapse plugin style.
+    def supported_themes
+      [
+       'alternate',
+       'classic',
+       'basecamp',
+       'squeejee'
+      ]
+    end
     
     # Determine the currently-used Redmine theme based on the global setting
     # Returns a string named 'currenttheme' containing the name of the current theme
     def current_redmine_theme
-      case Setting.ui_theme
-        when ''
-          currenttheme = 'default'
-        when 'alternate'
-          currenttheme = 'alternate'
-        when 'classic'
-          currenttheme = 'classic'
-        when 'basecamp'
-          currenttheme = 'basecamp'
-        when 'squeejee'
-          currenttheme = 'squeejee'
-        else
-          currenttheme = 'default'
+      if supported_themes.include?(Setting.ui_theme)
+        currenttheme = Setting.ui_theme
+      else
+        currenttheme = 'default'
       end
+
       return currenttheme
     end
     
