@@ -12,7 +12,7 @@ Besides that the plugin overrides Redmine Core's base-layout, it also provides t
   * on Redmine 0.8.0 project-links are pointing to project overviews
   * on Redmine 0.8.1 and up project-links are pointing to the currently-watched menu-item in the selected project (if available)
 * Optionally, the core's project-selector drop-down menu can be hidden
-* A second, optional tab named "Menus" provides links to all global (cross-project) views and reports
+* A second, optional tab named "Menus" provides links to all global (cross-project) views and reports (respecting the current users roles and permissions)
   * optionally, the default project-menu (by default placed horizontally below the header) can be "moved" to the menus tab
 * Used strings can be centrally translated to every language (currently only English, Dutch and German are translated, for others stubs are provided)
 * 100% compatible with all the core-themes (default, alternate & classic) and the currently supported and registered community-themes (basecamp and squeejee)
@@ -31,7 +31,7 @@ This plugin is compatible with the Redmine 0.8-stable branch (thus including rel
   * Presto (Opera)
   * WebKit (Safari/Chrome)
 
-* This plugin is fully compatible after applying a manual CSS-change for certain themes) on the following browser(-engine):
+* This plugin is for about 99% compatible after applying a manual CSS-change for certain themes) on the following browser(-engine):
   * Trident (Internet Explorer 7)
 
 ==Obtaining the plugin
