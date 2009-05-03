@@ -19,51 +19,31 @@ module CollapseApplicationHelperPatch
     # Redmine Core 0.8-stable@r2229 (0.8.1)
     # Returns true if the method is defined, else it returns false
     def jump_to_current_view_implemented
-      if Redmine::MenuManager::MenuController.method_defined? "redirect_to_project_menu_item"
-        return true
-      else
-        return false
-      end
+      return Redmine::MenuManager::MenuController.method_defined?("redirect_to_project_menu_item")
     end
     
     # Redmine Core 0.8-stable@r2230 (0.8.1)
     # Returns true if the method is defined, else it returns false
     def render_flash_messages_implemented 
-      if ApplicationHelper.method_defined? "render_flash_messages" 
-        return true
-      else
-        return false
-      end
+      return ApplicationHelper.method_defined?("render_flash_messages")
     end
     
     # Redmine Core trunk@r2304 (0.9-devel)
     # Returns true if the method is defined, else it returns false
     def render_project_hierarchy_implemented 
-      if ProjectsHelper.method_defined? "render_project_hierarchy" 
-        return true
-      else
-        return false
-      end
+      return ProjectsHelper.method_defined?("render_project_hierarchy")
     end
     
     # Redmine Core trunk@r2485 (0.9-devel)
     # Returns true if the method is defined, else it returns false
     def page_header_title_implemented
-      if ApplicationHelper.method_defined? "page_header_title" 
-        return true
-      else
-        return false
-      end
+      return ApplicationHelper.method_defined?("page_header_title")
     end
     
     # Redmine Core trunk@r2493 (0.9-devel)
     # Returns true if the constant is defined, else it returns false
     def rails_i18n_implemented
-      if Redmine.const_defined?(:I18n)
-        return true
-      else
-        return false
-      end
+      return Redmine.const_defined?(:I18n)
     end
     
     ###
