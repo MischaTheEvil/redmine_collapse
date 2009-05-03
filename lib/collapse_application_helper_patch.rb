@@ -36,7 +36,7 @@ module CollapseApplicationHelperPatch
       end
     end
     
-    # Redmine Core trunk@r2304
+    # Redmine Core trunk@r2304 (0.9-devel)
     # Returns true if the method is defined, else it returns false
     def render_project_hierarchy_implemented 
       if ProjectsHelper.method_defined? "render_project_hierarchy" 
@@ -46,7 +46,7 @@ module CollapseApplicationHelperPatch
       end
     end
     
-    # Redmine Core trunk@r2485
+    # Redmine Core trunk@r2485 (0.9-devel)
     # Returns true if the method is defined, else it returns false
     def page_header_title_implemented
       if ApplicationHelper.method_defined? "page_header_title" 
@@ -56,7 +56,7 @@ module CollapseApplicationHelperPatch
       end
     end
     
-    # Redmine Core trunk@r2493
+    # Redmine Core trunk@r2493 (0.9-devel)
     # Returns true if the constant is defined, else it returns false
     def rails_i18n_implemented
       if Redmine.const_defined?(:I18n)
@@ -114,9 +114,9 @@ module CollapseApplicationHelperPatch
     end
     
     # Left-menu selected-tab based on active controller and activated-tabs settings
-    # Returns a string containing the name of the selected tab
+    # Returns a string named 'selectedtab' containing the name of the selected tab
     def left_menu_selected_tab
-    # Initialize an array named "projecttab_controllers" containing the controllers on which the projects-tab should be activated by default
+      # Initialize an array named "projecttab_controllers" containing the controllers on which the projects-tab should be activated by default
       projecttab_controllers = [ 'welcome', 'account', 'admin', 'users', 'roles', 'trackers', 'issue_statuses', 'workflows', 'custom_fields', 'enumerations', 'settings' ]
       
       # Activate the projects-tab by default if the projects-tab is activated and the "projecttab_controllers"-array contains the current :controller-param
@@ -156,7 +156,7 @@ module CollapseApplicationHelperPatch
       return currenttheme
     end
     
-    # Renders the CSS-style used for selected project menu items in the projects tab
+    # Renders the CSS-style used for selected project menu items in the projects-tab
     # Returns a string containing the style-name or nil
     def project_menu_item_class(selected=false)
       if selected
@@ -166,7 +166,7 @@ module CollapseApplicationHelperPatch
       end
     end
     
-    # Renders the CSS-style used for selected global menu items in the menus tab
+    # Renders the CSS-style used for selected global menu items in the menus-tab
     # Returns a string containing the style-name or nil
     def global_menu_item_class(selected=false)
       if selected
@@ -180,10 +180,10 @@ module CollapseApplicationHelperPatch
     # Tab content helpers
     ###
     
-    # Renders the projects as a nested set of unordered lists  (Redmine 0.9.x)
+    # Renders the projects as a nested set of unordered lists  (Redmine 0.9-devel)
     # The given collection may be a subset of the whole project tree
     # (eg. some intermediate nodes are private and can not be seen)
-    # Returns a string containing the HTML for the bleeding-edge projects tab
+    # Returns a string containing the HTML for the bleeding-edge projects-tab
     def render_projects_nestedset(projects)
       s = ''
       if projects.any?
@@ -217,8 +217,8 @@ module CollapseApplicationHelperPatch
       return s
     end
     
-    # Renders the projects as a tree of unordered lists (Redmine 0.8.x)
-    # Returns a string containing the HTML for the legacy projects tab
+    # Renders the projects as a tree of unordered lists (Redmine 0.8-stable)
+    # Returns a string containing the HTML for the legacy projects-tab
     def render_projects_tree(projects)
       s = ''
       if projects.any?
@@ -285,7 +285,7 @@ module CollapseApplicationHelperPatch
     end
         
     # Renders the global menu as an unordered list (relies on backwards-compatibility in the core for the RESTful-routes of Redmine 0.9.x)
-    # Returns an array named 'globalmenu' containing the HTML for the global menu section in the menus tab
+    # Returns an array named 'globalmenu' containing the HTML for the global menu section in the menus-tab
     def render_global_menu
       returning '' do |globalmenu|
         globalmenu << "<ul>\n"
@@ -337,7 +337,6 @@ module CollapseApplicationHelperPatch
         
         globalmenu << "</ul>\n"
       end
-    end
-    
-  end
-end
+    end    
+  end # Close the module CollapseApplicationHelperPatch::InstanceMethods
+end # Close the module CollapseApplicationHelperPatch
