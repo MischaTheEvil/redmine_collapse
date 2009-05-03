@@ -1,12 +1,10 @@
 <h3><%= l(:label_menus_tab) %></h3>
 
-<% if Setting.plugin_redmine_collapse['show_projectmenu_in_menustab'] == '1' %>
-    <% if !@project.nil? %>
+<% if Setting.plugin_redmine_collapse['show_projectmenu_in_menustab'] == '1' && !@project.nil? %>
         <h4><%= l(:label_project_menu) %></h4>
         <div id="main-menu">
             <%= render_main_menu(@project) %>
         </div>
-    <% end %>
 <% end %>
 
 <h4><%= l(:label_global_menu) %></h4>
