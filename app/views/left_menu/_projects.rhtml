@@ -1,16 +1,12 @@
 <h3><%= l(:label_projects_tab) %></h3>
 
-<% if render_project_hierarchy_implemented == true %>
+<% if render_project_hierarchy_implemented %>
     <% user_projects = User.current.projects.find(:all) %>
-<% else %>
-    <% user_projects_by_root = User.current.projects.find(:all, :include => :parent).group_by(&:root) %>
-<% end %>
-
-<% if render_project_hierarchy_implemented == true %>
     <div id="projects-nested">
         <%= render_projects_nestedset(user_projects) %>
     </div>
 <% else %>
+    <% user_projects_by_root = User.current.projects.find(:all, :include => :parent).group_by(&:root) %>
     <div id="projects-tree">
         <%= render_projects_tree(user_projects_by_root) %>
     </div>
