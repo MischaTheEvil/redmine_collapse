@@ -13,7 +13,7 @@ Redmine::Plugin.register :redmine_collapse do
   name 'Redmine Collapse plugin'
   author 'Mischa The Evil'
   description 'This is a plugin for Redmine which transforms the static sidebar into a collapsible sidebar with additional features'
-  version '0.2.0-RC1'
+  version '0.2.0-RC2'
   
   requires_redmine :version_or_higher => '0.8.0'
   
