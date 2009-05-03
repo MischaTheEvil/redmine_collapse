@@ -186,9 +186,9 @@ module CollapseApplicationHelperPatch
                       if !@project.nil?
                         # Add 'selected'-class if the following condition is true
                         project_selected = project.identifier == @project.identifier
-                        link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
+                        link_to(h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
                       else
-                        link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
+                        link_to(h(project), {:controller => 'projects', :action => 'show', :id => project})
                       end
           ancestors << project
         end
@@ -211,9 +211,9 @@ module CollapseApplicationHelperPatch
                         if !@project.nil?
                           # Add 'selected'-class if the following condition is true
                           project_selected = root.identifier == @project.identifier
-                          link_to (h(root), {:controller => 'projects', :action => 'show', :id => root, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
+                          link_to(h(root), {:controller => 'projects', :action => 'show', :id => root, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
                         else
-                          link_to (h(root), {:controller => 'projects', :action => 'show', :id => root})
+                          link_to(h(root), {:controller => 'projects', :action => 'show', :id => root})
                         end
             s << "</li>\n"
           else
@@ -222,9 +222,9 @@ module CollapseApplicationHelperPatch
                         if !@project.nil?
                           # Add 'selected'-class if the following condition is true
                           project_selected = root.identifier == @project.identifier
-                          link_to (h(root), {:controller => 'projects', :action => 'show', :id => root}, :class => project_menu_item_class(project_selected))
+                          link_to(h(root), {:controller => 'projects', :action => 'show', :id => root}, :class => project_menu_item_class(project_selected))
                         else
-                          link_to (h(root), {:controller => 'projects', :action => 'show', :id => root})
+                          link_to(h(root), {:controller => 'projects', :action => 'show', :id => root})
                         end
             s << "</li>\n"
           end
@@ -239,9 +239,9 @@ module CollapseApplicationHelperPatch
                           if !@project.nil?
                             # Add 'selected'-class if the following condition is true
                             project_selected = project.identifier == @project.identifier
-                            link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
+                            link_to(h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
                           else
-                            link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
+                            link_to(h(project), {:controller => 'projects', :action => 'show', :id => project})
                           end
               s << "</li>\n"
             else
@@ -250,9 +250,9 @@ module CollapseApplicationHelperPatch
                           if !@project.nil?
                             # Add 'selected'-class if the following condition is true
                             project_selected = project.identifier == @project.identifier
-                            link_to (h(project), {:controller => 'projects', :action => 'show', :id => project}, :class => project_menu_item_class(project_selected))
+                            link_to(h(project), {:controller => 'projects', :action => 'show', :id => project}, :class => project_menu_item_class(project_selected))
                           else
-                            link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
+                            link_to(h(project), {:controller => 'projects', :action => 'show', :id => project})
                           end
               s << "</li>\n"
             end
