@@ -113,34 +113,34 @@ html>body #content {
 
 /***** The menus tab *****/
 #main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu {
-  margin-right: 0px;
-  position: static;
+    margin-right: 0px;
+    position: static;
 }
 #main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu ul li {
-  float: none;
-  list-style-type: none;
+    float: none;
+    list-style-type: none;
 }
 
 #main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a {
-  display: block;
-  color: #2A5685;
-  text-decoration: none;
-  padding: 4px 10px 4px 0px;
-  font-weight: normal;
+    display: block;
+    color: #2A5685;
+    text-decoration: none;
+    padding: 4px 10px 4px 0px;
+    font-weight: normal;
 }
 #main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
-  background: #FFFFFF;
-  color: #C61A1A;
+    background: #FFFFFF;
+    color: #C61A1A;
 }
 #main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
 #main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
-  background: #FFFFFF;
-  color: #555555;
+    background: #FFFFFF;
+    color: #555555;
 }
 #main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
 #main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
-  background: #FFFFFF;
-  color: #555555;
+    background: #FFFFFF;
+    color: #555555;
 }
 
 /***** The projects tab *****/
@@ -260,35 +260,35 @@ html>body #content {
 
 /***** The menus tab *****/
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu {
-  margin-right: 0px;
-  position: static;
+    margin-right: 0px;
+    position: static;
 }
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu ul li {
-  float: none;
-  list-style-type: none;
+    float: none;
+    list-style-type: none;
 }
 
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a {
-  display: block;
-  color: #2A5685;
-  background-color: #EEEEEE;
-  text-decoration: none;
-  padding: 4px 10px 4px 0px;
-  font-weight: normal;
+    display: block;
+    color: #2A5685;
+    background-color: #EEEEEE;
+    text-decoration: none;
+    padding: 4px 10px 4px 0px;
+    font-weight: normal;
 }
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
-  background: #EEEEEE;
-  color: #C61A1A;
+    background: #EEEEEE;
+    color: #C61A1A;
 }
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
-  background: #EEEEEE;
-  color: #555555;
+    background: #EEEEEE;
+    color: #555555;
 }
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
 #main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
-  background: #EEEEEE;
-  color: #555555;
+    background: #EEEEEE;
+    color: #555555;
 }
 
 /***** The projects tab *****/
@@ -408,36 +408,36 @@ html>body #content {
 
 /***** The menus tab *****/
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu {
-  margin-right: 0px;
-  position: static;
+    margin-right: 0px;
+    position: static;
 }
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu ul li {
-  float: none;
-  list-style-type: none;
+    float: none;
+    list-style-type: none;
 }
 
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a {
-  display: block;
-  color: #467AA7;
-  background-color: #FFFFFF;
-  text-decoration: none;
-  padding: 4px 10px 4px 0px;
-  font-weight: bold;
-  font-size: 100%;
+    display: block;
+    color: #467AA7;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    padding: 4px 10px 4px 0px;
+    font-weight: bold;
+    font-size: 100%;
 }
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
-  background: #FFFFFF;
-  color: #C61A1A;
+    background: #FFFFFF;
+    color: #C61A1A;
 }
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
-  background: #FFFFFF;
-  color: #555555;
+    background: #FFFFFF;
+    color: #555555;
 }
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
 #main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
-  background: #FFFFFF;
-  color: #555555;
+    background: #FFFFFF;
+    color: #555555;
 }
 
 /***** The projects tab *****/
@@ -558,36 +558,36 @@ html>body #content {
 
 /***** The menus tab *****/
 #main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu {
-  margin-left: 0px;
-  margin-right: 0px;
-  position: static;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: static;
 }
 #main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu ul li {
-  float: none;
-  list-style-type: none;
+    float: none;
+    list-style-type: none;
 }
 
 #main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a {
-  display: block;
-  background-color: #EEEEEE;
-  color: #2A5685;
-  text-decoration: none;
-  padding: 4px 10px 4px 0px;
-  font-weight: normal;
+    display: block;
+    background-color: #EEEEEE;
+    color: #2A5685;
+    text-decoration: none;
+    padding: 4px 10px 4px 0px;
+    font-weight: normal;
 }
 #main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
-  background: #EEEEEE;
-  color: #C61A1A;
+    background: #EEEEEE;
+    color: #C61A1A;
 }
 #main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
 #main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
-  background: #EEEEEE;
-  color: #555555;
+    background: #EEEEEE;
+    color: #555555;
 }
 #main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
 #main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
-  background: #EEEEEE;
-  color: #555555;
+    background: #EEEEEE;
+    color: #555555;
 }
 
 /***** The projects tab *****/
@@ -725,34 +725,34 @@ html>body #content {
 
 /***** The menus tab *****/
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu {
-  margin-right: 0px;
-  position: static;
+    margin-right: 0px;
+    position: static;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu ul li {
-  float: none;
-  list-style-type: none;
+    float: none;
+    list-style-type: none;
 }
 
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a {
-  display: block;
-  color: #8C8C8C;
-  background-color: #333333;
-  text-decoration: none;
-  font-weight: bold;
+    display: block;
+    color: #8C8C8C;
+    background-color: #333333;
+    text-decoration: none;
+    font-weight: bold;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
-  background-color: #333333;
-  color: #B3B3B3;
+    background-color: #333333;
+    color: #B3B3B3;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
-  background-color: #333333;
-  color: #BFBFBF;
+    background-color: #333333;
+    color: #BFBFBF;
 }
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
 #main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
-  background: #333333;
-  color: #BFBFBF;
+    background: #333333;
+    color: #BFBFBF;
 }
 
 /***** The projects tab *****/
