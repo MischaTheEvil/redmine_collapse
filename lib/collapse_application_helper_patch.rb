@@ -55,7 +55,7 @@ module CollapseApplicationHelperPatch
     def left_menu_tabs
       # Don't render the menus-tab nor the projects-tab unless specifically configured
       if Setting.plugin_redmine_collapse['show_menus_tab'] == '1' && Setting.plugin_redmine_collapse['show_projects_tab'] == '1'
-        if rails_i18n_implemented == true
+        if rails_i18n_implemented
           tabs = [ { :name => 'actions-tab', :label => :label_actions_tab, :partial => 'left_menu/actions.rhtml' },
                    { :name => 'menus-tab', :label => :label_menus_tab, :partial => 'left_menu/menus.rhtml' },
                    { :name => 'projects-tab', :label => :label_projects_tab, :partial => 'left_menu/projects.rhtml' } ]
@@ -66,7 +66,7 @@ module CollapseApplicationHelperPatch
         end
       # Don't render the menus-tab unless specifically configured
       elsif Setting.plugin_redmine_collapse['show_menus_tab'] == '1'
-        if rails_i18n_implemented == true
+        if rails_i18n_implemented
           tabs = [ { :name => 'actions-tab', :label => :label_actions_tab, :partial => 'left_menu/actions.rhtml' },
                    { :name => 'menus-tab', :label => :label_menus_tab, :partial => 'left_menu/menus.rhtml' } ]
         else
@@ -75,7 +75,7 @@ module CollapseApplicationHelperPatch
         end
       # Don't render the projects-tab unless specifically configured
       elsif Setting.plugin_redmine_collapse['show_projects_tab'] == '1'
-        if rails_i18n_implemented == true
+        if rails_i18n_implemented
           tabs = [ { :name => 'actions-tab', :label => :label_actions_tab, :partial => 'left_menu/actions.rhtml' },
                    { :name => 'projects-tab', :label => :label_projects_tab, :partial => 'left_menu/projects.rhtml' } ]
         else
@@ -84,12 +84,13 @@ module CollapseApplicationHelperPatch
         end
       # Always render the actions-tab
       else
-        if rails_i18n_implemented == true
+        if rails_i18n_implemented
           tabs = [ { :name => 'actions-tab', :label => :label_actions_tab, :partial => 'left_menu/actions.rhtml' } ]
         else
           tabs = [ { :name => 'actions-tab', :label => l(:label_actions_tab), :partial => 'left_menu/actions.rhtml' } ]
         end
       end
+      
       return tabs
     end
     
@@ -109,6 +110,7 @@ module CollapseApplicationHelperPatch
       else
         selectedtab = 'actions-tab'
       end
+      
       return selectedtab
     end
     
@@ -116,8 +118,8 @@ module CollapseApplicationHelperPatch
     # Tab design helpers
     ###
 
-    # List of themes that are supported by the collapse plugin.
-    # Others will use the 'default' collapse plugin style.
+    # List of additional themes that are supported by the Collapse plugin besides the default Redmine theme.
+    # Others will use the 'default' Collapse plugin style.
     def supported_themes
       [
        'alternate',
@@ -135,7 +137,7 @@ module CollapseApplicationHelperPatch
       else
         currenttheme = 'default'
       end
-
+      
       return currenttheme
     end
     
@@ -197,6 +199,7 @@ module CollapseApplicationHelperPatch
         end
         s << ("</li></ul>\n" * ancestors.size)
       end
+      
       return s
     end
     
@@ -208,7 +211,7 @@ module CollapseApplicationHelperPatch
         s << "<ul>\n"
         # Iterate over the root-projects
         projects.keys.sort.each do |root|
-          if jump_to_current_view_implemented == true
+          if jump_to_current_view_implemented
             s << "<li>" +
                         # Only add ':jump => current_menu_item' URL-parameter if on project level
                         if !@project.nil?
@@ -236,7 +239,7 @@ module CollapseApplicationHelperPatch
           projects[root].sort.each do |project|
             # Skip if the project is a root-project
             next if project == root
-            if jump_to_current_view_implemented == true
+            if jump_to_current_view_implemented
               s << "<li>" +
                           # Only add ':jump => current_menu_item' URL-parameter if on project level
                           if !@project.nil?
@@ -264,6 +267,7 @@ module CollapseApplicationHelperPatch
         end
         s << "</ul>\n" # close the UL-element of the root-projects iteration
       end
+      
       return s
     end
         
