@@ -19,51 +19,31 @@ module CollapseApplicationHelperPatch
     # Redmine Core 0.8-stable@r2229 (0.8.1)
     # Returns true if the method is defined, else it returns false
     def jump_to_current_view_implemented
-      if Redmine::MenuManager::MenuController.method_defined? "redirect_to_project_menu_item"
-        return true
-      else
-        return false
-      end
+      return Redmine::MenuManager::MenuController.method_defined?("redirect_to_project_menu_item")
     end
     
     # Redmine Core 0.8-stable@r2230 (0.8.1)
     # Returns true if the method is defined, else it returns false
     def render_flash_messages_implemented 
-      if ApplicationHelper.method_defined? "render_flash_messages" 
-        return true
-      else
-        return false
-      end
+      return ApplicationHelper.method_defined?("render_flash_messages")
     end
     
     # Redmine Core trunk@r2304 (0.9-devel)
     # Returns true if the method is defined, else it returns false
     def render_project_hierarchy_implemented 
-      if ProjectsHelper.method_defined? "render_project_hierarchy" 
-        return true
-      else
-        return false
-      end
+      return ProjectsHelper.method_defined?("render_project_hierarchy")
     end
     
     # Redmine Core trunk@r2485 (0.9-devel)
     # Returns true if the method is defined, else it returns false
     def page_header_title_implemented
-      if ApplicationHelper.method_defined? "page_header_title" 
-        return true
-      else
-        return false
-      end
+      return ApplicationHelper.method_defined?("page_header_title")
     end
     
     # Redmine Core trunk@r2493 (0.9-devel)
     # Returns true if the constant is defined, else it returns false
     def rails_i18n_implemented
-      if Redmine.const_defined?(:I18n)
-        return true
-      else
-        return false
-      end
+      return Redmine.const_defined?(:I18n)
     end
     
     ###
@@ -135,24 +115,27 @@ module CollapseApplicationHelperPatch
     ###
     # Tab design helpers
     ###
+
+    # List of themes that are supported by the collapse plugin.
+    # Others will use the 'default' collapse plugin style.
+    def supported_themes
+      [
+       'alternate',
+       'classic',
+       'basecamp',
+       'squeejee'
+      ]
+    end
     
     # Determine the currently-used Redmine theme based on the global setting
     # Returns a string named 'currenttheme' containing the name of the current theme
     def current_redmine_theme
-      case Setting.ui_theme
-        when ''
-          currenttheme = 'default'
-        when 'alternate'
-          currenttheme = 'alternate'
-        when 'classic'
-          currenttheme = 'classic'
-        when 'basecamp'
-          currenttheme = 'basecamp'
-        when 'squeejee'
-          currenttheme = 'squeejee'
-        else
-          currenttheme = 'default'
+      if supported_themes.include?(Setting.ui_theme)
+        currenttheme = Setting.ui_theme
+      else
+        currenttheme = 'default'
       end
+
       return currenttheme
     end
     
@@ -206,9 +189,9 @@ module CollapseApplicationHelperPatch
                       if !@project.nil?
                         # Add 'selected'-class if the following condition is true
                         project_selected = project.identifier == @project.identifier
-                        link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
+                        link_to(h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
                       else
-                        link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
+                        link_to(h(project), {:controller => 'projects', :action => 'show', :id => project})
                       end
           ancestors << project
         end
@@ -231,9 +214,9 @@ module CollapseApplicationHelperPatch
                         if !@project.nil?
                           # Add 'selected'-class if the following condition is true
                           project_selected = root.identifier == @project.identifier
-                          link_to (h(root), {:controller => 'projects', :action => 'show', :id => root, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
+                          link_to(h(root), {:controller => 'projects', :action => 'show', :id => root, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
                         else
-                          link_to (h(root), {:controller => 'projects', :action => 'show', :id => root})
+                          link_to(h(root), {:controller => 'projects', :action => 'show', :id => root})
                         end
             s << "</li>\n"
           else
@@ -242,9 +225,9 @@ module CollapseApplicationHelperPatch
                         if !@project.nil?
                           # Add 'selected'-class if the following condition is true
                           project_selected = root.identifier == @project.identifier
-                          link_to (h(root), {:controller => 'projects', :action => 'show', :id => root}, :class => project_menu_item_class(project_selected))
+                          link_to(h(root), {:controller => 'projects', :action => 'show', :id => root}, :class => project_menu_item_class(project_selected))
                         else
-                          link_to (h(root), {:controller => 'projects', :action => 'show', :id => root})
+                          link_to(h(root), {:controller => 'projects', :action => 'show', :id => root})
                         end
             s << "</li>\n"
           end
@@ -259,9 +242,9 @@ module CollapseApplicationHelperPatch
                           if !@project.nil?
                             # Add 'selected'-class if the following condition is true
                             project_selected = project.identifier == @project.identifier
-                            link_to (h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
+                            link_to(h(project), {:controller => 'projects', :action => 'show', :id => project, :jump => current_menu_item}, :class => project_menu_item_class(project_selected))
                           else
-                            link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
+                            link_to(h(project), {:controller => 'projects', :action => 'show', :id => project})
                           end
               s << "</li>\n"
             else
@@ -270,9 +253,9 @@ module CollapseApplicationHelperPatch
                           if !@project.nil?
                             # Add 'selected'-class if the following condition is true
                             project_selected = project.identifier == @project.identifier
-                            link_to (h(project), {:controller => 'projects', :action => 'show', :id => project}, :class => project_menu_item_class(project_selected))
+                            link_to(h(project), {:controller => 'projects', :action => 'show', :id => project}, :class => project_menu_item_class(project_selected))
                           else
-                            link_to (h(project), {:controller => 'projects', :action => 'show', :id => project})
+                            link_to(h(project), {:controller => 'projects', :action => 'show', :id => project})
                           end
               s << "</li>\n"
             end
