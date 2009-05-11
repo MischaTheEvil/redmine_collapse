@@ -11,7 +11,6 @@
     * Enhancement #244: Migrate legacy (<0.9[dev]) project-retrieval code from view to CollapseApplicationHelperPatch-library method
     * Enhancement #247: Add compatibility validation for Rails-i18n implemented?
     * Enhancement #252: Change the Redmine Core patch to use the Rails dispatcher
-    * Enhancement #252: Change the Redmine Core patch to use the Rails dispatcher
     * Enhancement #254: Improve the overall code-quality (make it more Ruby-ish)
     * Feature #180: Add new configurable menus tab
     * Feature #253: Add more global links to the menus tab
