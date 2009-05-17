@@ -29,13 +29,13 @@ This plugin is compatible with the Redmine 0.8-stable branch (thus including rel
 
 ===Browser compatibility
 
-* This plugin is fully compatible on the current, big-four of browser-engines:
+* This plugin is fully compatible with the current, big-four of browser-engines:
   * Gecko (Mozilla)
   * Trident (Internet Explorer 8)
   * Presto (Opera)
   * WebKit (Safari/Chrome)
 
-* This plugin is for about 99% compatible after applying a manual CSS-change for certain themes) on the following browser-engine:
+* This plugin is for about 99% compatible after applying a manual CSS-change for certain themes) with the following browser-engine:
   * Trident (Internet Explorer 7)
 
 ==Obtaining the plugin
