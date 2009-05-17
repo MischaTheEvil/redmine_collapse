@@ -1,4 +1,4 @@
-0.2.0 (03-05-2009)
+0.2.0 (17-05-2009)
     * Defect #202: Naming collision on admin > settings > projects; settingstab 'projects' not rendered
     * Defect #204: Faulty project-selection on projects-tab after merge of nested-projects branch to trunk
     * Defect #237: Make it (backwards-)compatible with recent i18n changes in Redmine Core
