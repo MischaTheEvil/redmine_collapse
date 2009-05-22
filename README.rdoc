@@ -102,7 +102,7 @@ Make sure that no plugin-assets remain available in _"../public/plugin_assets/re
 
 This is a limited selection of the changes made to the plugin. For the complete changelog see the _"../CHANGELOG_"-file in the plugin directory.
 
-===0.2.0 (03-05-2009)
+===0.2.0 (22-05-2009)
 
 Second release providing some major new features, fixes for reported bugs plus providing compatibility with current Redmine versions and Redmine themes:
 
@@ -120,7 +120,8 @@ Second release providing some major new features, fixes for reported bugs plus p
 * Enhancement:  Change the Redmine Core patch to use the Rails dispatcher
 * Feature:  Add new configurable menus tab
 * Feature:  Add (more) global links to the menus tab
-* Task-HITDM:  [Patch] German translation for 0.1.0
+* Task-HITDM:  [Patch] German translation
+* Task-HITDM:  [Patch] Czech and Slovak translations
 * Task-HITDM:  Sync the base-layout with the vendor's bleeding-edge source (trunk)
 * Task-HITDM:  Enhance the projects tab styling to match the styling of the menus tab
 
@@ -155,7 +156,9 @@ Thanks goes out to the following people:
 
 ===Translation-credits
 
-* German: Andreas Schnederle-Wagner (http://www.Futureweb.at)
+* Czech (CS): Stanislav Pach (http://www.redmine.org/account/show/2564)
+* German (DE): Andreas Schnederle-Wagner (http://www.Futureweb.at)
+* Slovak (SK): Stanislav Pach (http://www.redmine.org/account/show/2564)
 
 ==Licensing
 

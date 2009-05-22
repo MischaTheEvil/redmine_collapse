@@ -1,4 +1,4 @@
-0.2.0 (17-05-2009)
+0.2.0 (22-05-2009)
     * Defect #202: Naming collision on admin > settings > projects; settingstab 'projects' not rendered
     * Defect #204: Faulty project-selection on projects-tab after merge of nested-projects branch to trunk
     * Defect #237: Make it (backwards-)compatible with recent i18n changes in Redmine Core
@@ -18,6 +18,7 @@
     * Task-HITDM #240: Sync the base-layout with the vendor's bleeding-edge source (trunk)
     * Task-HITDM #245: Enhance the projects tab styling to match the styling of the menus tab
     * Task-HITDM #248: Code-cleanup and commenting
+    * Task-HITDM #271: [Patch] Czech and Slovak translations
 
 0.1.0 (07-01-2009)
     * Feature #176: Add method to CollapseApplicationHelperPatch:: which returns if redirect_to_project_menu_item is defined
