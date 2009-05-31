@@ -1,31 +1,47 @@
 =Redmine Collapse plugin
 
-A plugin to transform the default, static Redmine sidebar into a collapsible sidebar on the left side also providing some additional tabs containing project- and menu-links.
+A Redmine plugin to transform the default, static sidebar into a collapsible sidebar on the left side providing some additional tabs containing project- and menu-links.
 
-== Packager and maintainer
+==Author
 
 * Mischa The Evil
 
+==History
+
+The Redmine Collapse plugin is a Redmine plugin-port of the collapsible-sidebar implementation created by Sebastian Kurfürst for the {Typo3-Forge}[http://forge.typo3.org]. He has implemented the feature in the following revisions in the Redmine-fork they use:
+* revision 1085: {Adding blindLeft and blindRight}[http://forge.typo3.org/repositories/diff/team-forge?rev=1085]
+* revision 1086: {Adding left menu collapser to SVN}[http://forge.typo3.org/repositories/diff/team-forge?rev=1086]
+* revision 1087: {Adding missing image}[http://forge.typo3.org/repositories/diff/team-forge?rev=1087]
+* revision 1088: {Fixing small JS error}[http://forge.typo3.org/repositories/diff/team-forge?rev=1088]
+
+This implementation depends on core-hacks and some custom Typo3 Redmine plugins. It also doesn't do good to the Default (and the core's additional themes +Alternate+ & +Classic+). This made the author decide to implement the feature within a seperate and independed Redmine plugin.
+
 ==Features
 
-Besides that the plugin overrides Redmine Core's base-layout, it also provides the following features:
+The following features are provided by the plugin:
 * Replaces the Redmine core's sidebar
   * The provided sidebar is made collapsible using JavaScript-helpers
   * The default sidebar-content is made available on the default "Actions"-tab
 * A first, optional tab named "Projects" provides (nested) project-links of projects for which the current user has a role
   * on Redmine 0.8.0 project-links are pointing to project overviews
-  * on Redmine 0.8.1 and up project-links are pointing to the currently-watched menu-item in the selected project (if available)
+  * on Redmine 0.8.1 and later project-links are pointing to the currently-watched menu-item in the selected project (if available)
 * Optionally, the core's project-selector drop-down menu can be hidden
 * A second, optional tab named "Menus" provides links to all global (cross-project) views and reports (respecting the current users roles and permissions)
   * optionally, the default project-menu (by default placed horizontally below the header) can be "moved" to the menus tab
-* Used strings can be centrally translated to every language (currently only English, Dutch and German are translated, for others stubs are provided)
-* 100% compatible with all the core-themes (default, alternate & classic) and the currently supported and registered community-themes (basecamp and squeejee)
+* Used strings can be centrally translated to every language (currently only Czech, Dutch, English, German and Slovak are translated, for others English stubs are provided)
+* 100% compatible with all the core-themes (+Default+, +Alternate+ & +Classic+) and the currently supported and registered community-themes (+Basecamp+ and +Squeejee+)
+
+One note should be made: currently the plugin overrides the Redmine base-layout to implement the features as described.
+
+==Screenshots
+
+[ ... see online version of this page ... ]
 
 ==Compatibility
 
 ===Redmine compatibility
 
-This plugin is compatible with the Redmine 0.8-stable branch (thus including releases: 0.8.0, 0.8.1, 0.8.2 and 0.8.3) and the trunk upto (at least) r2700.
+The plugin is compatible with the Redmine 0.8-stable branch (thus including releases: 0.8.0, 0.8.1, 0.8.2, 0.8.3 and 0.8.4) and the trunk.
 
 ===Browser compatibility
 
@@ -35,7 +51,7 @@ This plugin is compatible with the Redmine 0.8-stable branch (thus including rel
   * Presto (Opera)
   * WebKit (Safari/Chrome)
 
-* This plugin is for about 99% compatible after applying a manual CSS-change for certain themes) with the following browser-engine:
+* This plugin is for about 99% compatible (after applying a manual CSS-change for certain themes) with the following browser-engine:
   * Trident (Internet Explorer 7)
 
 ==Obtaining the plugin
@@ -47,10 +63,10 @@ The plugin can be downloaded as a packaged release from:
 
 ==Installation
 
-1. Download the plugin either using one of the described ways from "Obtaining the plugin"
-2. Install the plugin as described at http://www.redmine.org/wiki/redmine/Plugins (this plugin does not require a plugin database migration)
+1. Download the plugin from the available sources (see "Obtaining the plugin")
+2. Install the plugin as described at: http://www.redmine.org/wiki/redmine/Plugins (this plugin does not require a plugin database migration)
 3. Login to your Redmine as an Administrator
-4. Initially configure the plugin-settings
+4. Initially configure the plugin settings
 
 ==Configuration
 
@@ -61,9 +77,23 @@ This plugin can be configured under Administration -> Plugins -> Redmine Collaps
   * Show the project menu in the menus tab (default: unchecked, only configurable when "Show the menus tab" is checked)
 * Sidebar position (default: Left, though functionality isn't implemented [yet])
 
+==Upgrade
+
+1. Download the latest archive file from the available sources (see "Obtaining the plugin")
+2. Backup the currently deployed collapse plugin (in _"../vendor/plugins"_: +mv redmine_collapse redmine_collapse-backup+)
+3. Unzip the downloaded file to your Redmine into the plugin-directory _"../vendor/plugins"_
+4. Restart your Redmine
+
+==Uninstall
+
+1. Remove the directory +redmine_collapse+ from the plugin-directory _"../vendor/plugins"_
+2. Restart Redmine.
+
+Make sure that no plugin-assets remain available in _"../public/plugin_assets/redmine_collapse"_.
+
 ==Workaround for Internet Explorer 7
 
-Due to the fact that Microsoft Internet Explorer 7 doesn't fully support the inherit-value (which is defined by CSS 2.1) a manual modification of a CSS-declaration is required when using either the default or the classic theme (or every other theme which sets an incorrect +background-color+ on +#main+). You need to hard-code the wanted enumeration of the inherit-value by changing the following snippet in _../assets/stylesheets/collapse.css_:
+Due to the fact that Microsoft Internet Explorer 7 doesn't fully support the +inherit+ value (which is defined by CSS 2.1) a manual modification of a CSS-declaration is required when using either the +Default+ or the +Classic+ theme (or every other theme which sets an incorrect +background-color+ on +#main+). You need to hard-code the wanted enumeration of the +inherit+ value by changing the following snippet in _"../assets/stylesheets/collapse.css"_:
 
 from:
 
@@ -80,65 +110,13 @@ to:
 <tt>
 /***** Overloading Redmine Core layout-selectors *****/
 #main {
-    background-color: #FFFFFF; /* hard-code white (#FFFFFF) for IE7 with either the default- or the classic-theme */
+    background-color: #FFFFFF; /* hard-code white (#FFFFFF) for IE7 with either the Default- or the Classic-theme */
     padding: 2px 0px 0px 14px;
 }</tt>
 
-==Upgrade
-
-1. Download the latest archive file from the available sources (see "Obtaining the plugin")
-2. Backup the currently deployed collapse plugin (in _"../vendor/plugins"_: mv redmine_collapse redmine_collapse-backup)
-3. Unzip the downloaded file to your Redmine into the plugin-directory _"../vendor/plugins"_
-4. Restart your Redmine
-
-==Uninstall
-
-1. Remove the directory +redmine_collapse+ from the plugin-directory _"../vendor/plugins"_
-2. Restart Redmine.
-
-Make sure that no plugin-assets remain available in _"../public/plugin_assets/redmine_collapse"_.
-
 ==Changelog
 
-This is a limited selection of the changes made to the plugin. For the complete changelog see the _"../CHANGELOG_"-file in the plugin directory.
-
-===0.2.0 (22-05-2009)
-
-Second release providing some major new features, fixes for reported bugs plus providing compatibility with current Redmine versions and Redmine themes:
-
-* Defect:  Naming collision on admin > settings > projects; settingstab 'projects' not rendered
-* Defect:  Faulty project-selection on projects-tab after merge of nested-projects branch to trunk
-* Defect:  Make it (backwards-)compatible with recent i18n changes in Redmine Core
-* Defect:  Using IE7 the first letters of the project names are dropped in the projects-tab
-* Defect:  Subprojects in projects-tab are missing the project-id in their URLs when jump_to_current_view_implemented == true
-* Defect:  Fix encoding of i18n files
-* Defect:  Fix the positioning of the collapsible sidebar delimiter-image by converting px into em for cross-browser compatibility
-* Enhancement:  Optimize controller-detection code for selected-tab
-* Enhancement:  Refactor the CSS styling-mechanism to provide theme-respecting styles for the collapsible sidebar
-* Enhancement:  Migrate legacy (<0.9[dev]) project-retrieval code from view to CollapseApplicationHelperPatch-library method
-* Enhancement:  Add compatibility validation for Rails-i18n implemented?
-* Enhancement:  Change the Redmine Core patch to use the Rails dispatcher
-* Feature:  Add new configurable menus tab
-* Feature:  Add (more) global links to the menus tab
-* Task-HITDM:  [Patch] German translation
-* Task-HITDM:  [Patch] Czech and Slovak translations
-* Task-HITDM:  Sync the base-layout with the vendor's bleeding-edge source (trunk)
-* Task-HITDM:  Enhance the projects tab styling to match the styling of the menus tab
-
-===0.1.0 (07-01-2009)
-
-Initial version developed as a single Redmine plugin. Some major-issues were closed with this release:
-
-* Feature:  Add method to CollapseApplicationHelperPatch:: which returns if redirect_to_project_menu_item is defined
-* Feature:  Add method to CollapseApplicationHelperPatch:: which returns if render_flash_messages is defined
-* Enhancement:  Projects-tab links should include parameter ":jump => current_menu_item"
-* Enhancement:  Refactor the inclusion-mechanism of the helper-methods into class 'ApplicationHelper'
-* Enhancement:  Obviation of change in flash-message rendering in base-layout in Redmine 0.8.1
-* Enhancement:  Move logics for selected-tab from base-view to helper-method
-
-===0.0.0 (as of 01-11-2008)
-
-* Initial sources by Sebastian Kurfürst as core-hack patches for the Typo3 Redmine instance.
+For the complete changelog see the +CHANGELOG+ file in the Redmine Collapse plugin directory.
 
 ==Credits
 
@@ -162,9 +140,9 @@ Thanks goes out to the following people:
 
 ==Licensing
 
-This plugin is open-source and licensed under the "GNU General Public License v2":http://www.gnu.org/licenses/old-licenses/gpl-2.0.html (GPL). See COPYRIGHT.txt and GPL.txt for details.
+This plugin is open-source and licensed under the {GNU General Public License v2}[http://www.gnu.org/licenses/old-licenses/gpl-2.0.html] (GPL). See +COPYRIGHT.txt+ and +GPL.txt+ for details.
 
 ==Support
 
 If you need help, would like to report a bug or request a new feature you can contact the 
-maintainer via mail (mischa_the_evil [AT] hotmail [DOT] com) or at his (upcoming) website: http://www.evil-dev.net.
+author via mail (mischa_the_evil [AT] hotmail [DOT] com) or at his (upcoming) website: http://www.evil-dev.net.

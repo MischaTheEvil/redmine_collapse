@@ -1,3 +1,8 @@
+0.2.1 (31-05-2009)
+    * Defect #272: Vietnamese i18n files cannot be found
+    * Defect #273: Thai i18n files are missing some strings
+    * Enhancement #274: Bring i18n support back in sync with the Redmine Core trunk (add English stubs for Bosnian, Galician and Slovenian languages)
+
 0.2.0 (22-05-2009)
     * Defect #202: Naming collision on admin > settings > projects; settingstab 'projects' not rendered
     * Defect #204: Faulty project-selection on projects-tab after merge of nested-projects branch to trunk
