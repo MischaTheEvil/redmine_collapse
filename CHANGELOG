@@ -1,3 +1,6 @@
+0.2.2 (06-06-2009)
+    * Defect #287: Collapse tabs are clashing with the core-tabs of the project-settings
+
 0.2.1 (31-05-2009)
     * Defect #272: Vietnamese i18n files cannot be found
     * Defect #273: Thai i18n files are missing some strings
