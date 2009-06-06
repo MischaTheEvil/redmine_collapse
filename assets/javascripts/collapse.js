@@ -2,16 +2,16 @@
 
 /* Show left tab */
 function showLeftTab(name) {
- var f = $$('div#leftmenu .tab-content');
+ var f = $$('div#leftmenu .collapse_tab-content');
  for(var i=0; i<f.length; i++){
    Element.hide(f[i]);
  }
- var f = $$('div.tabs a');
+ var f = $$('div.collapse_tabs a');
  for(var i=0; i<f.length; i++){
   Element.removeClassName(f[i], "selected");
  }
- Element.show('tab-content-' + name);
- Element.addClassName('tab-' + name, "selected");
+ Element.show('collapse_tab-content-' + name);
+ Element.addClassName('collapse_tab-' + name, "selected");
  return false;
 }
 

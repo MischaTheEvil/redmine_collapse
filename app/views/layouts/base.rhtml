@@ -65,26 +65,26 @@
         <div id="leftmenu">
             <div id="leftmenu-contents">
                 <div style="width:210px">
-                    <% tabs = left_menu_tabs %>
-                    <% selected_tab = params[:tab] ? params[:tab].to_s : tabs.first[:name] %>
-                    <% selected_tab = left_menu_selected_tab %>
+                    <% collapse_tabs = left_menu_tabs %>
+                    <% collapse_selected_tab = params[:tab] ? params[:tab].to_s : tabs.first[:name] %>
+                    <% collapse_selected_tab = left_menu_selected_tab %>
                     
-                    <div class="tabs">
+                    <div class="collapse_tabs">
                         <ul>
-                            <% tabs.each do |tab| -%>
-                                <li><%= link_to l(tab[:label]), { :tab => tab[:name] },
-                                                                :id => "tab-#{tab[:name]}",
-                                                                :class => (tab[:name] != selected_tab ? nil : 'selected'),
-                                                                :onclick => "showLeftTab('#{tab[:name]}'); this.blur(); return false;" %></li>
+                            <% collapse_tabs.each do |collapse_tab| -%>
+                                <li><%= link_to l(collapse_tab[:label]), { :tab => collapse_tab[:name] },
+                                                                         :id => "collapse_tab-#{tab[:name]}",
+                                                                         :class => (collapse_tab[:name] != collapse_selected_tab ? nil : 'selected'),
+                                                                         :onclick => "showLeftTab('#{collapse_tab[:name]}'); this.blur(); return false;" %></li>
                             <% end -%>
                         </ul>
                     </div>
                     
-                    <% tabs.each do |tab| -%>
-                        <%= content_tag('div', render(:partial => tab[:partial]),
-                                               :id => "tab-content-#{tab[:name]}",
-                                               :style => (tab[:name] != selected_tab ? 'display:none' : nil),
-                                               :class => 'tab-content') %>
+                    <% collapse_tabs.each do |collapse_tab| -%>
+                        <%= content_tag('div', render(:partial => collapse_tab[:partial]),
+                                               :id => "collapse_tab-content-#{collapse_tab[:name]}",
+                                               :style => (collapse_tab[:name] != collapse_selected_tab ? 'display:none' : nil),
+                                               :class => 'collapse_tab-content') %>
                     <% end -%>
                 </div>
             </div>

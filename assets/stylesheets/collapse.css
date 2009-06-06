@@ -61,27 +61,27 @@ html>body #content {
 *****/
 
 /***** The global tab layout *****/
-#leftmenu-default #leftmenu .tabs {
+#leftmenu-default #leftmenu .collapse_tabs {
     height: 2.95em;
     border-bottom: 1px solid #BBBBBB;
     position: relative;
 }
-#leftmenu-default #leftmenu .tab-content { margin-top: 1.2em; }
+#leftmenu-default #leftmenu .collapse_tab-content { margin-top: 1.2em; }
 
-#leftmenu-default #leftmenu .tabs ul {
+#leftmenu-default #leftmenu .collapse_tabs ul {
     margin: 0;
     position: absolute;
     bottom: -2px;
     padding-left: 6px;
 }
-#leftmenu-default #leftmenu .tabs>ul { bottom: -1px; } /* others */
-#leftmenu-default #leftmenu .tabs ul li {
+#leftmenu-default #leftmenu .collapse_tabs>ul { bottom: -1px; } /* others */
+#leftmenu-default #leftmenu .collapse_tabs ul li {
     float: left;
     list-style-type: none;
     margin-right: 4px;
     background: #FFFFFF;
 }
-#leftmenu-default #leftmenu .tabs ul li a{
+#leftmenu-default #leftmenu .collapse_tabs ul li a{
     display: block;
     font-size: 0.9em;
     text-decoration: none;
@@ -93,76 +93,76 @@ html>body #content {
     color: #777777;
     font-weight: bold;
 }
-#leftmenu-default #leftmenu .tabs ul li a:hover {
+#leftmenu-default #leftmenu .collapse_tabs ul li a:hover {
     background-color: #FFFFDD;
     text-decoration: none;
 }
-#leftmenu-default #leftmenu .tabs ul li a.selected {
+#leftmenu-default #leftmenu .collapse_tabs ul li a.selected {
     background-color: #FFFFFF;
     border: 1px solid #BBBBBB;
     border-bottom: 1px solid #FFFFFF;
 }
-#leftmenu-default #leftmenu .tabs ul li a.selected:hover {
+#leftmenu-default #leftmenu .collapse_tabs ul li a.selected:hover {
     background-color: #FFFFFF;
 }
 
 /***** The actions tab *****/
-#main #leftmenu-default #leftmenu #tab-content-actions-tab h3 {
+#main #leftmenu-default #leftmenu #collapse_tab-content-actions-tab h3 {
     margin-top: 15px;
 }
 
 /***** The menus tab *****/
-#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu {
+#main #leftmenu-default #leftmenu #collapse_tab-content-menus-tab  #main-menu {
     margin-right: 0px;
     position: static;
 }
-#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu ul li {
+#main #leftmenu-default #leftmenu #collapse_tab-content-menus-tab  #main-menu ul li {
     float: none;
     list-style-type: none;
 }
 
-#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a {
+#main #leftmenu-default #leftmenu #collapse_tab-content-menus-tab  #main-menu li a {
     display: block;
     color: #2A5685;
     text-decoration: none;
     padding: 4px 10px 4px 0px;
     font-weight: normal;
 }
-#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
+#main #leftmenu-default #leftmenu #collapse_tab-content-menus-tab  #main-menu li a:hover {
     background: #FFFFFF;
     color: #C61A1A;
 }
-#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
-#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
+#main #leftmenu-default #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.selected,
+#main #leftmenu-default #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.selected:hover {
     background: #FFFFFF;
     color: #555555;
 }
-#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
-#main #leftmenu-default #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
+#main #leftmenu-default #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.alt-selected,
+#main #leftmenu-default #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.alt-selected:hover {
     background: #FFFFFF;
     color: #555555;
 }
 
 /***** The projects tab *****/
-#main #leftmenu-default #leftmenu #tab-content-projects-tab div#projects-tree {
+#main #leftmenu-default #leftmenu #collapse_tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
 }
-#main #leftmenu-default #leftmenu #tab-content-projects-tab ul ul {
+#main #leftmenu-default #leftmenu #collapse_tab-content-projects-tab ul ul {
     margin-bottom: 4px;
 }
-#main #leftmenu-default #leftmenu #tab-content-projects-tab li a {
+#main #leftmenu-default #leftmenu #collapse_tab-content-projects-tab li a {
     display: block;
     color: #2A5685;
     text-decoration: none;
     padding: 4px 10px 4px 0px;
     font-weight: normal;
 }
-#main #leftmenu-default #leftmenu #tab-content-projects-tab li a:hover {
+#main #leftmenu-default #leftmenu #collapse_tab-content-projects-tab li a:hover {
     background: #FFFFFF;
     color: #C61A1A;
 }
-#main #leftmenu-default #leftmenu #tab-content-projects-tab li a.selected,
-#main #leftmenu-default #leftmenu #tab-content-projects-tab li a.selected:hover {
+#main #leftmenu-default #leftmenu #collapse_tab-content-projects-tab li a.selected,
+#main #leftmenu-default #leftmenu #collapse_tab-content-projects-tab li a.selected:hover {
     background: #FFFFFF;
     color: #555555;
 }
@@ -208,27 +208,27 @@ html>body #content {
 *****/
 
 /***** The global tab layout *****/
-#leftmenu-alternate #leftmenu .tabs {
+#leftmenu-alternate #leftmenu .collapse_tabs {
     height: 1.92em;
     border-bottom: 1px solid #BBBBBB;
     position: relative;
 }
-#leftmenu-alternate #leftmenu .tab-content { margin-top: 1.2em; }
+#leftmenu-alternate #leftmenu .collapse_tab-content { margin-top: 1.2em; }
 
-#leftmenu-alternate #leftmenu .tabs ul {
+#leftmenu-alternate #leftmenu .collapse_tabs ul {
     margin: 0;
     position: absolute;
     bottom: -2px;
     padding-left: 6px;
 }
-#leftmenu-alternate #leftmenu .tabs>ul { bottom: -1px; } /* others */
-#leftmenu-alternate #leftmenu .tabs ul li {
+#leftmenu-alternate #leftmenu .collapse_tabs>ul { bottom: -1px; } /* others */
+#leftmenu-alternate #leftmenu .collapse_tabs ul li {
     float: left;
     list-style-type: none;
     margin-right: 4px;
     background: #FFFFFF;
 }
-#leftmenu-alternate #leftmenu .tabs ul li a{
+#leftmenu-alternate #leftmenu .collapse_tabs ul li a{
     display: block;
     font-size: 0.9em;
     text-decoration: none;
@@ -240,35 +240,35 @@ html>body #content {
     color: #777777;
     font-weight: bold;
 }
-#leftmenu-alternate #leftmenu .tabs ul li a:hover {
+#leftmenu-alternate #leftmenu .collapse_tabs ul li a:hover {
     background-color: #FFFFDD;
     text-decoration: none;
 }
-#leftmenu-alternate #leftmenu .tabs ul li a.selected {
+#leftmenu-alternate #leftmenu .collapse_tabs ul li a.selected {
     background-color: #EEEEEE;
     border: 1px solid #BBBBBB;
     border-bottom: 1px solid #EEEEEE;
 }
-#leftmenu-alternate #leftmenu .tabs ul li a.selected:hover {
+#leftmenu-alternate #leftmenu .collapse_tabs ul li a.selected:hover {
     background-color: #EEEEEE;
 }
 
 /***** The actions tab *****/
-#main #leftmenu-alternate #leftmenu #tab-content-actions-tab h3 {
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-actions-tab h3 {
     margin-top: 15px;
 }
 
 /***** The menus tab *****/
-#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu {
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-menus-tab  #main-menu {
     margin-right: 0px;
     position: static;
 }
-#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu ul li {
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-menus-tab  #main-menu ul li {
     float: none;
     list-style-type: none;
 }
 
-#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a {
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-menus-tab  #main-menu li a {
     display: block;
     color: #2A5685;
     background-color: #EEEEEE;
@@ -276,41 +276,41 @@ html>body #content {
     padding: 4px 10px 4px 0px;
     font-weight: normal;
 }
-#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-menus-tab  #main-menu li a:hover {
     background: #EEEEEE;
     color: #C61A1A;
 }
-#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
-#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.selected,
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.selected:hover {
     background: #EEEEEE;
     color: #555555;
 }
-#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
-#main #leftmenu-alternate #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.alt-selected,
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.alt-selected:hover {
     background: #EEEEEE;
     color: #555555;
 }
 
 /***** The projects tab *****/
-#main #leftmenu-alternate #leftmenu #tab-content-projects-tab div#projects-tree {
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
 }
-#main #leftmenu-alternate #leftmenu #tab-content-projects-tab ul ul {
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-projects-tab ul ul {
     margin-bottom: 4px;
 }
-#main #leftmenu-alternate #leftmenu #tab-content-projects-tab li a {
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-projects-tab li a {
     display: block;
     color: #2A5685;
     text-decoration: none;
     padding: 4px 10px 4px 0px;
     font-weight: normal;
 }
-#main #leftmenu-alternate #leftmenu #tab-content-projects-tab li a:hover {
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-projects-tab li a:hover {
     background: #EEEEEE;
     color: #C61A1A;
 }
-#main #leftmenu-alternate #leftmenu #tab-content-projects-tab li a.selected,
-#main #leftmenu-alternate #leftmenu #tab-content-projects-tab li a.selected:hover {
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-projects-tab li a.selected,
+#main #leftmenu-alternate #leftmenu #collapse_tab-content-projects-tab li a.selected:hover {
     background: #EEEEEE;
     color: #555555;
 }
@@ -356,27 +356,27 @@ html>body #content {
 *****/
 
 /***** The global tab layout *****/
-#leftmenu-classic #leftmenu .tabs {
+#leftmenu-classic #leftmenu .collapse_tabs {
     height: 2.95em;
     border-bottom: 1px solid #BBBBBB;
     position: relative;
 }
-#leftmenu-classic #leftmenu .tab-content { margin-top: 1.2em; }
+#leftmenu-classic #leftmenu .collapse_tab-content { margin-top: 1.2em; }
 
-#leftmenu-classic #leftmenu .tabs ul {
+#leftmenu-classic #leftmenu .collapse_tabs ul {
     margin: 0;
     position: absolute;
     bottom: -2px;
     padding-left: 6px;
 }
-#leftmenu-classic #leftmenu .tabs>ul { bottom: -1px; } /* others */
-#leftmenu-classic #leftmenu .tabs ul li {
+#leftmenu-classic #leftmenu .collapse_tabs>ul { bottom: -1px; } /* others */
+#leftmenu-classic #leftmenu .collapse_tabs ul li {
     float: left;
     list-style-type: none;
     margin-right: 4px;
     background: #FFFFFF;
 }
-#leftmenu-classic #leftmenu .tabs ul li a{
+#leftmenu-classic #leftmenu .collapse_tabs ul li a{
     display: block;
     font-size: 0.9em;
     text-decoration: none;
@@ -388,35 +388,35 @@ html>body #content {
     color: #777777;
     font-weight: bold;
 }
-#leftmenu-classic #leftmenu .tabs ul li a:hover {
+#leftmenu-classic #leftmenu .collapse_tabs ul li a:hover {
     background-color: #FFFFDD;
     text-decoration: none;
 }
-#leftmenu-classic #leftmenu .tabs ul li a.selected {
+#leftmenu-classic #leftmenu .collapse_tabs ul li a.selected {
     background-color: #FFFFFF;
     border: 1px solid #BBBBBB;
     border-bottom: 1px solid #FFFFFF;
 }
-#leftmenu-classic #leftmenu .tabs ul li a.selected:hover {
+#leftmenu-classic #leftmenu .collapse_tabs ul li a.selected:hover {
     background-color: #FFFFFF;
 }
 
 /***** The actions tab *****/
-#main #leftmenu-classic #leftmenu #tab-content-actions-tab h3 {
+#main #leftmenu-classic #leftmenu #collapse_tab-content-actions-tab h3 {
     margin-top: 15px;
 }
 
 /***** The menus tab *****/
-#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu {
+#main #leftmenu-classic #leftmenu #collapse_tab-content-menus-tab  #main-menu {
     margin-right: 0px;
     position: static;
 }
-#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu ul li {
+#main #leftmenu-classic #leftmenu #collapse_tab-content-menus-tab  #main-menu ul li {
     float: none;
     list-style-type: none;
 }
 
-#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a {
+#main #leftmenu-classic #leftmenu #collapse_tab-content-menus-tab  #main-menu li a {
     display: block;
     color: #467AA7;
     background-color: #FFFFFF;
@@ -425,41 +425,41 @@ html>body #content {
     font-weight: bold;
     font-size: 100%;
 }
-#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
+#main #leftmenu-classic #leftmenu #collapse_tab-content-menus-tab  #main-menu li a:hover {
     background: #FFFFFF;
     color: #C61A1A;
 }
-#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
-#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
+#main #leftmenu-classic #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.selected,
+#main #leftmenu-classic #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.selected:hover {
     background: #FFFFFF;
     color: #555555;
 }
-#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
-#main #leftmenu-classic #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
+#main #leftmenu-classic #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.alt-selected,
+#main #leftmenu-classic #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.alt-selected:hover {
     background: #FFFFFF;
     color: #555555;
 }
 
 /***** The projects tab *****/
-#main #leftmenu-classic #leftmenu #tab-content-projects-tab div#projects-tree {
+#main #leftmenu-classic #leftmenu #collapse_tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
 }
-#main #leftmenu-classic #leftmenu #tab-content-projects-tab ul ul {
+#main #leftmenu-classic #leftmenu #collapse_tab-content-projects-tab ul ul {
     margin-bottom: 4px;
 }
-#main #leftmenu-classic #leftmenu #tab-content-projects-tab li a {
+#main #leftmenu-classic #leftmenu #collapse_tab-content-projects-tab li a {
     display: block;
     color: #467AA7;
     text-decoration: none;
     padding: 4px 10px 4px 0px;
     font-weight: bold;
 }
-#main #leftmenu-classic #leftmenu #tab-content-projects-tab li a:hover {
+#main #leftmenu-classic #leftmenu #collapse_tab-content-projects-tab li a:hover {
     background: #FFFFFF;
     color: #C61A1A;
 }
-#main #leftmenu-classic #leftmenu #tab-content-projects-tab li a.selected,
-#main #leftmenu-classic #leftmenu #tab-content-projects-tab li a.selected:hover {
+#main #leftmenu-classic #leftmenu #collapse_tab-content-projects-tab li a.selected,
+#main #leftmenu-classic #leftmenu #collapse_tab-content-projects-tab li a.selected:hover {
     background: #FFFFFF;
     color: #555555;
 }
@@ -506,27 +506,27 @@ html>body #content {
 *****/
 
 /***** The global tab layout *****/
-#leftmenu-basecamp #leftmenu .tabs {
+#leftmenu-basecamp #leftmenu .collapse_tabs {
     height: 1.95em;
     border-bottom: 1px solid #BBBBBB;
     position: relative;
 }
-#leftmenu-basecamp #leftmenu .tab-content { margin-top: 1.2em; }
+#leftmenu-basecamp #leftmenu .collapse_tab-content { margin-top: 1.2em; }
 
-#leftmenu-basecamp #leftmenu .tabs ul {
+#leftmenu-basecamp #leftmenu .collapse_tabs ul {
     margin: 0;
     position: absolute;
     bottom: -2px;
     padding-left: 6px;
 }
-#leftmenu-basecamp #leftmenu .tabs>ul { bottom: -1px; } /* others */
-#leftmenu-basecamp #leftmenu .tabs ul li {
+#leftmenu-basecamp #leftmenu .collapse_tabs>ul { bottom: -1px; } /* others */
+#leftmenu-basecamp #leftmenu .collapse_tabs ul li {
     float: left;
     list-style-type: none;
     margin-right: 4px;
     background: #FFFFFF;
 }
-#leftmenu-basecamp #leftmenu .tabs ul li a{
+#leftmenu-basecamp #leftmenu .collapse_tabs ul li a{
     display: block;
     font-size: 0.9em;
     text-decoration: none;
@@ -538,36 +538,36 @@ html>body #content {
     color: #777777;
     font-weight: bold;
 }
-#leftmenu-basecamp #leftmenu .tabs ul li a:hover {
+#leftmenu-basecamp #leftmenu .collapse_tabs ul li a:hover {
     background-color: #FFFFDD;
     text-decoration: none;
 }
-#leftmenu-basecamp #leftmenu .tabs ul li a.selected {
+#leftmenu-basecamp #leftmenu .collapse_tabs ul li a.selected {
     background-color: #EEEEEE;
     border: 1px solid #BBBBBB;
     border-bottom: 1px solid #EEEEEE;
 }
-#leftmenu-basecamp #leftmenu .tabs ul li a.selected:hover {
+#leftmenu-basecamp #leftmenu .collapse_tabs ul li a.selected:hover {
     background-color: #EEEEEE;
 }
 
 /***** The actions tab *****/
-#main #leftmenu-basecamp #leftmenu #tab-content-actions-tab h3 {
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-actions-tab h3 {
     margin-top: 15px;
 }
 
 /***** The menus tab *****/
-#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu {
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-menus-tab  #main-menu {
     margin-left: 0px;
     margin-right: 0px;
     position: static;
 }
-#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu ul li {
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-menus-tab  #main-menu ul li {
     float: none;
     list-style-type: none;
 }
 
-#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a {
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-menus-tab  #main-menu li a {
     display: block;
     background-color: #EEEEEE;
     color: #2A5685;
@@ -575,41 +575,41 @@ html>body #content {
     padding: 4px 10px 4px 0px;
     font-weight: normal;
 }
-#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-menus-tab  #main-menu li a:hover {
     background: #EEEEEE;
     color: #C61A1A;
 }
-#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
-#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.selected,
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.selected:hover {
     background: #EEEEEE;
     color: #555555;
 }
-#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
-#main #leftmenu-basecamp #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.alt-selected,
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.alt-selected:hover {
     background: #EEEEEE;
     color: #555555;
 }
 
 /***** The projects tab *****/
-#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab div#projects-tree {
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
 }
-#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab ul ul {
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-projects-tab ul ul {
     margin-bottom: 4px;
 }
-#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab li a {
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-projects-tab li a {
     display: block;
     color: #2A5685;
     text-decoration: none;
     padding: 4px 10px 4px 0px;
     font-weight: normal;
 }
-#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab li a:hover {
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-projects-tab li a:hover {
     background: #EEEEEE;
     color: #C61A1A;
 }
-#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab li a.selected,
-#main #leftmenu-basecamp #leftmenu #tab-content-projects-tab li a.selected:hover {
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-projects-tab li a.selected,
+#main #leftmenu-basecamp #leftmenu #collapse_tab-content-projects-tab li a.selected:hover {
     background: #EEEEEE;
     color: #555555;
 }
@@ -655,27 +655,27 @@ html>body #content {
 *****/
 
 /***** The global tab layout *****/
-#leftmenu-squeejee #leftmenu .tabs {
+#leftmenu-squeejee #leftmenu .collapse_tabs {
     height: 2.90em;
     border-bottom: 1px solid #BBBBBB;
     position: relative;
 }
-#leftmenu-squeejee #leftmenu .tab-content { margin-top: 1.2em; }
+#leftmenu-squeejee #leftmenu .collapse_tab-content { margin-top: 1.2em; }
 
-#leftmenu-squeejee #leftmenu .tabs ul {
+#leftmenu-squeejee #leftmenu .collapse_tabs ul {
     margin: 0;
     position: absolute;
     bottom: -2px;
     padding-left: 6px;
 }
-#leftmenu-squeejee #leftmenu .tabs>ul { bottom: -1px; } /* others */
-#leftmenu-squeejee #leftmenu .tabs ul li {
+#leftmenu-squeejee #leftmenu .collapse_tabs>ul { bottom: -1px; } /* others */
+#leftmenu-squeejee #leftmenu .collapse_tabs ul li {
     float: left;
     list-style-type: none;
     margin-right: 4px;
     background: #FFFFFF;
 }
-#leftmenu-squeejee #leftmenu .tabs ul li a{
+#leftmenu-squeejee #leftmenu .collapse_tabs ul li a{
     display: block;
     font-size: 0.9em;
     text-decoration: none;
@@ -687,17 +687,17 @@ html>body #content {
     color: #777777;
     font-weight: bold;
 }
-#leftmenu-squeejee #leftmenu .tabs ul li a:hover {
+#leftmenu-squeejee #leftmenu .collapse_tabs ul li a:hover {
     background-color: #FFFFDD;
     text-decoration: none;
 }
-#leftmenu-squeejee #leftmenu .tabs ul li a.selected {
+#leftmenu-squeejee #leftmenu .collapse_tabs ul li a.selected {
     background-color: #333333;
     color: #8C8C8C;
     border: 1px solid #BBBBBB;
     border-bottom: 1px solid #333333;
 }
-#leftmenu-squeejee #leftmenu .tabs ul li a.selected:hover {
+#leftmenu-squeejee #leftmenu .collapse_tabs ul li a.selected:hover {
     background-color: #333333;
 }
 
@@ -716,57 +716,57 @@ html>body #content {
 }
 
 /***** The actions tab *****/
-#main #leftmenu-squeejee #leftmenu #tab-content-actions-tab a {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-actions-tab a {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-actions-tab h3 {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-actions-tab h3 {
     margin-top: 15px;
 }
 
 /***** The menus tab *****/
-#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-menus-tab  #main-menu {
     margin-right: 0px;
     position: static;
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu ul li {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-menus-tab  #main-menu ul li {
     float: none;
     list-style-type: none;
 }
 
-#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-menus-tab  #main-menu li a {
     display: block;
     color: #8C8C8C;
     background-color: #333333;
     text-decoration: none;
     font-weight: bold;
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a:hover {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-menus-tab  #main-menu li a:hover {
     background-color: #333333;
     color: #B3B3B3;
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.selected,
-#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.selected:hover {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.selected,
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.selected:hover {
     background-color: #333333;
     color: #BFBFBF;
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected,
-#main #leftmenu-squeejee #leftmenu #tab-content-menus-tab  #main-menu li a.alt-selected:hover {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.alt-selected,
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-menus-tab  #main-menu li a.alt-selected:hover {
     background: #333333;
     color: #BFBFBF;
 }
 
 /***** The projects tab *****/
-#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab div#projects-tree {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-projects-tab div#projects-tree {
     margin-left: -25px;
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab ul li {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-projects-tab ul li {
     border: solid 1px #333333;
     border-width: 1px 1px 0px 0px;
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab ul ul {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-projects-tab ul ul {
     margin-bottom: 4px;
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-projects-tab li a {
     display: block;
     color: #8C8C8C;
     text-decoration: none;
@@ -774,13 +774,13 @@ html>body #content {
     padding: 4px 10px 4px 0px;
     font-weight: bold;
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li:hover {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-projects-tab li:hover {
     border-color: #555555;
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a:hover {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-projects-tab li a:hover {
     color: #B3B3B3;
 }
-#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a.selected,
-#main #leftmenu-squeejee #leftmenu #tab-content-projects-tab li a.selected:hover {
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-projects-tab li a.selected,
+#main #leftmenu-squeejee #leftmenu #collapse_tab-content-projects-tab li a.selected:hover {
     color: #BFBFBF;
 }
