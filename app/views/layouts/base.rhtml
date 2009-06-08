@@ -66,14 +66,14 @@
             <div id="leftmenu-contents">
                 <div style="width:210px">
                     <% collapse_tabs = left_menu_tabs %>
-                    <% collapse_selected_tab = params[:tab] ? params[:tab].to_s : tabs.first[:name] %>
+                    <% collapse_selected_tab = params[:tab] ? params[:tab].to_s : collapse_tabs.first[:name] %>
                     <% collapse_selected_tab = left_menu_selected_tab %>
                     
                     <div class="collapse_tabs">
                         <ul>
                             <% collapse_tabs.each do |collapse_tab| -%>
                                 <li><%= link_to l(collapse_tab[:label]), { :tab => collapse_tab[:name] },
-                                                                         :id => "collapse_tab-#{tab[:name]}",
+                                                                         :id => "collapse_tab-#{collapse_tab[:name]}",
                                                                          :class => (collapse_tab[:name] != collapse_selected_tab ? nil : 'selected'),
                                                                          :onclick => "showLeftTab('#{collapse_tab[:name]}'); this.blur(); return false;" %></li>
                             <% end -%>
