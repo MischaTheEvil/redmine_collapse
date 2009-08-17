@@ -1,16 +1,4 @@
-require_dependency 'application_helper'
-
-module CollapseApplicationHelperPatch
-  def self.included(base) # :nodoc:
-    base.extend(ClassMethods)
-
-    base.send(:include, InstanceMethods)
-  end
-  
-  module ClassMethods
-  end
-  
-  module InstanceMethods
+module CollapseHelper
     
     ###
     # Compatibility helpers
@@ -324,6 +312,6 @@ module CollapseApplicationHelperPatch
         
         globalmenu << "</ul>\n"
       end
-    end    
-  end # Close the module CollapseApplicationHelperPatch::InstanceMethods
-end # Close the module CollapseApplicationHelperPatch
+    end
+
+end # Close the module CollapseHelper
